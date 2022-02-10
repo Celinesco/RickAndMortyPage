@@ -1,0 +1,65 @@
+.card__container {
+    display: flex;
+    background-color: rgb(71, 71, 71);
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    height: 200px;
+    color: white;
+    p {
+        margin-top: 0;
+    }
+ 
+}
+
+.img__container {
+    width: 250px;
+    margin-right: 15px;
+    display: flex;   
+    img {
+        width: 100%;
+        border-radius: 10px 0px 0px 10px;
+    }
+}
+.container__status {
+    display: flex;
+    align-items: center;
+    div {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+    }
+    p {
+        margin:0;
+        margin-left: 5px;
+    }
+}
+
+.info__container {
+    h2 {
+        color: white;
+        margin-bottom: 0;
+    }
+}
+
+.section {
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.Alive {
+    background-color:green;
+}
+
+.Dead {
+    background-color:red;
+}
+
+.unknown {
+    background-color:white;
+}
+.subtitle {
+    color: lightgrey;
+    margin-bottom: 0;
+}
