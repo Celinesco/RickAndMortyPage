@@ -57,13 +57,8 @@ const App = () => {
 export default App;
 
 // preguntas Male
-// Animaciones. 
-// Me cuesta organizarme donde colocar los estados, y tener criterio para cuando hacer componentes. 
-// Ejemplo el componente form o el componente de los botones para hacer fetch
+// Animaciones 
 // Al oncklick, se le puede asignar mas de una funcion? Y como se le pasan parametros a las funciones. 
-// sobre los fetchs, me convendria hacer en este caso un fecth asi:
-// fetch(`https://rickandmortyapi.com/api/${seccion}/?name=${busqueda}`) 
-// en este caso. el fecth deberia estar en app? para evitar escribir uno por cada seccion?
-// preguntar si en CharacterSection se esta haciendo dos veces el Fetch
 // para la cantidad de paginas totales, por que tengo que hacer una variable de estado??
-// cuando busco personajes por input. En el supuesto caso de que haya mas de 20 personajes, tengo que esconder los botones de paginado 
+// cuando busco personajes por input. En el supuesto caso de que haya mas de 20 personajes, tengo que esconder los botones de paginado
+// que pasa si dos estados afectan al mismo componente?

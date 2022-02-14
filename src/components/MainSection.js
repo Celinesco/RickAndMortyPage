@@ -16,7 +16,7 @@ const MainSection = ({loadCharacters,loadEpisodes,loadLocations}) => {
         <section className='section__main'>
             {visibleBox && <Presentation handleBoxClick={handleBoxClick}/>}
             {visibleOption && <SearchOptions 
-             loadCharacters={loadCharacters}
+             loadCharacters = {loadCharacters}
              loadEpisodes = {loadEpisodes}
              loadLocations = {loadLocations}
             />}
