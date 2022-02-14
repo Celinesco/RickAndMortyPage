@@ -1,0 +1,30 @@
+form {
+    background: rgb(0, 0, 0);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 100px;
+    padding: 20px;
+    input {
+        margin-top: 15px ;
+        height: 35px;
+        width: 220px;
+        border-radius: 5px;
+    }
+}
+
+.container__labelinput {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__iconsearch {
+    width: 60px;
+    img {
+        width: 100%;
+    }
+}

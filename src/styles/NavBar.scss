@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76) ;
+    width:100%;
+    height: 170px;
+    z-index: 3;
+    border-bottom: 1px solid #04855d;
+    button {
+        margin-left: 20px;
+    }
+}
+
+.navbar__ul {
+    padding: 25px;
+    display: flex;
+    li  {
+        margin: 10px;
+       
+    }
+    a {
+        color: #00ffae;
+    }
+}
+
+.container__box-mrmeeseeks {
+    width: 80px;
+
+    img {
+        width:100%;
+    }
+}
+
+.p__logo {
+    position: relative;
+    left:5%;
+    color: white;
+    font-family: RickAndMorty;
+    font-size: 50px;
+    animation-name: sombra;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+  
+}
+
+@keyframes sombra {
+    from {
+        text-shadow: 
+        0 0 2px #fff,
+        0 0 9px #fff,
+        0 0 2px #fff,
+        0 0 42px #0fa,
+        0 0 42px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+      }
+    
+      to {
+        text-shadow: 
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 5px #fff,
+        0 0 30px #0fa,
+        0 0 10px #0fa,
+        0 0 30px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+      }
+}

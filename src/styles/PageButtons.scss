@@ -1,0 +1,20 @@
+.container__button-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 60px 0;
+    padding: 10px;
+    
+    button {
+        display: flex;
+        align-items: center;
+        font-size: 50px;
+        color: #00ffae;
+        background-color: black;
+        margin: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #00ffae;
+        box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76);
+    }
+}
