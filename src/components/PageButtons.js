@@ -5,13 +5,13 @@ import { BiChevronRight } from 'react-icons/bi';
 import { BiChevronsRight } from 'react-icons/bi';
 
 
-const PageButtons = () => {
+const PageButtons = ({nextPage, previousPage, lastPage, firstPage}) => {
     return (
         <div className='container__button-pages'>
-            <button><BiChevronsLeft /></button>
-            <button><BiChevronLeft /></button>
-            <button><BiChevronRight /></button>
-            <button><BiChevronsRight /></button>
+            <button><BiChevronsLeft onClick={firstPage}/></button>
+            <button><BiChevronLeft onClick={previousPage} /></button>
+            <button onClick={nextPage}><BiChevronRight /></button>
+            <button><BiChevronsRight onClick={lastPage} /></button>
         </div>
 
     )

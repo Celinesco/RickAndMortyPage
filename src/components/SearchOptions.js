@@ -18,21 +18,21 @@ const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {
                 Find your favorite Character
                 <ButtonFetch 
                 message="Go!" 
-                section={loadCharacters} 
+                openSection={loadCharacters} 
                 />
             </div>
             <div className="option__container">
                 Looking for an episode?
                 <ButtonFetch 
                 message="Click here" 
-                section={loadEpisodes}
+                openSection={loadEpisodes}
              />
             </div>
             <div className="option__container">
                 Searching for your next vacation-destiny?
                 <ButtonFetch 
                 message="Get on board" 
-                section={loadLocations}
+                openSection={loadLocations}
                 />
             </div>
           </div>

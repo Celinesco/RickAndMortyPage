@@ -11,7 +11,7 @@ const Form = ({ handleChange, handleClick }) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className='container__labelinput'>
-                <label for="character-search">Find character</label>
+                <label htmlFor="character-search">Find character</label>
                     <input id="character-search" type="text" onChange={handleChange}></input>
                 
             </div>
