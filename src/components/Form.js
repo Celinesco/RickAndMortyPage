@@ -1,7 +1,7 @@
 import '../styles/Form.scss'
 import MrMeeseeksSearch from '../Mr_Meeseeks.png'
 
-const Form = ({ handleChange, handleClick }) => {
+const Form = ({ handleOnChange, handleClick }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -12,7 +12,7 @@ const Form = ({ handleChange, handleClick }) => {
         <form onSubmit={handleSubmit}>
             <div className='container__labelinput'>
                 <label htmlFor="character-search">Find character</label>
-                    <input id="character-search" type="text" onChange={handleChange}></input>
+                    <input id="character-search" type="text" onChange={handleOnChange}></input>
                 
             </div>
             <button onClick={handleClick}>

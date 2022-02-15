@@ -3,17 +3,17 @@ import '../styles/CardContainer.scss';
 
 
 
-const CardContainer = ({personajes}) => {
+const CardContainer = ({searchedResults}) => {
     return (
         <div className='container__cards'>
-            {personajes.map((personaje)=> (
+            {searchedResults.map((result)=> (
                 <Card 
-                key = {personaje.id}
-                title = {personaje.name}
-                img = {personaje.image}
-                status = {personaje.status}
-                location = {personaje.location.name}
-                firstEpisode = {personaje.episode[0]}
+                key = {result.id}
+                title = {result.name}
+                img = {result.image}
+                status = {result.status}
+                location = {result.location.name}
+                firstEpisode = {result.episode[0]}
                 />
             ))}
         </div>

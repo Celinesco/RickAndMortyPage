@@ -4,10 +4,8 @@ import Mms from '../Mms.png'
 import { useState } from 'react';
 
 const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {
-    //cuando apreto el boton seccion personajes quiero que:
-    //1- se oculte la main-seccion
-    //2-aparezca la seccion personajes
-    //PREGUNTA PARA MALE: pueden dos estados != afectar al mismo componente?
+ 
+    
 
 
 
