@@ -1,8 +1,9 @@
 import CharactersContainer from "./CharactersContainer";
 import '../styles/SectionsBackground.scss'
 import Form from './Form';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PageButtons from "./PageButtons";
+import CharacterDetails from './CharacterDetails';
 
 const CharacterSection = (
     {
@@ -17,7 +18,9 @@ const CharacterSection = (
     previousPage, 
     lastPage,
     setTotalPages,
-}) => {
+}) => { 
+    const [characterDetails, setCharacterDetails] = useState(false)
+
     
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`) 
@@ -28,15 +31,23 @@ const CharacterSection = (
         })
     }, [search, page]);
 
+    
+
+    const handleCardClick = () => {
+        setCharacterDetails(true)
+    }
 
     return (
         <section className="section__characters">
+            {characterDetails && <CharacterDetails />}
             <Form 
             handleOnChange={handleOnChange}
             handleClick={handleClick}
             />
             <CharactersContainer 
-            searchedResults={searchedResults}/>
+            searchedResults={searchedResults}
+            handleCardClick={handleCardClick}
+            />
             <PageButtons 
             nextPage={nextPage}
             previousPage={previousPage}

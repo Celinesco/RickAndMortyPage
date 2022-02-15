@@ -86,7 +86,6 @@ const App = () => {
         setSearchedResults={setSearchedResults}
         searchedResults={searchedResults}
       />}
-      
       {episodeSection && <EpisodeSection
         input={inputValue}
         search={search}

@@ -1,13 +1,19 @@
-import '../styles/Card.scss'
 
-const CharacterCard = ({ title, img, status, location, firstEpisode }) => {
+import { useState } from 'react';
+import '../styles/Card.scss';
+import CharacterDetails from './CharacterDetails';
 
+const CharacterCard = ({title, img, status, location, firstEpisode, handleCardClick}) => {
+    
+   
     if (status === "unknown") {
         status = "Unknown"
     }
 
+
+
     return (
-        <article className='card__container'>
+        <article onClick={handleCardClick} className='card__container'>
             <div className='img__container'>
                 <img src={img}></img>
             </div>

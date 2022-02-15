@@ -1,0 +1,13 @@
+.container__details-section {
+    position:fixed;
+    display: flex;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.74);
+    height:100vh;
+    overflow: hidden;
+    width: 100vw;
+    z-index: 1000;
+    color:white;
+}
