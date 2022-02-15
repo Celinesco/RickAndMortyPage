@@ -11,3 +11,19 @@
     z-index: 1000;
     color:white;
 }
+
+.container__modal-info {
+    position: relative;
+    background-color: gray;
+    border-radius: 10px;
+    width: 700px;
+    height: 600px;
+}
+
+.button__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+}

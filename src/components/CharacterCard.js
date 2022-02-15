@@ -1,7 +1,6 @@
 
-import { useState } from 'react';
 import '../styles/Card.scss';
-import CharacterDetails from './CharacterDetails';
+
 
 const CharacterCard = ({title, img, status, location, firstEpisode, handleCardClick}) => {
     

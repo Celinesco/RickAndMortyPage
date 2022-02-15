@@ -37,9 +37,15 @@ const CharacterSection = (
         setCharacterDetails(true)
     }
 
+    const handleCloseDetails = () => {
+        setCharacterDetails(false)
+    }
+
     return (
         <section className="section__characters">
-            {characterDetails && <CharacterDetails />}
+            {characterDetails && <CharacterDetails 
+            handleCloseDetails={handleCloseDetails}
+            />}
             <Form 
             handleOnChange={handleOnChange}
             handleClick={handleClick}
