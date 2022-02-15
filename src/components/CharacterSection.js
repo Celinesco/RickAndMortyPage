@@ -1,11 +1,8 @@
-import CharactersContainer from "./CardContainer";
-import '../styles/CharacterSection.scss'
+import CharactersContainer from "./CharactersContainer";
+import '../styles/SectionsBackground.scss'
 import Form from './Form';
 import { useEffect } from 'react';
 import PageButtons from "./PageButtons";
-
-
-
 
 const CharacterSection = (
     {
@@ -22,7 +19,6 @@ const CharacterSection = (
     setTotalPages,
 }) => {
     
-    
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`) 
         .then ((res) => res.json())
@@ -30,7 +26,6 @@ const CharacterSection = (
             setSearchedResults(data.results)
             setTotalPages(data.info.pages)
         })
-
     }, [search, page]);
 
 

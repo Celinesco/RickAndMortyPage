@@ -2,7 +2,7 @@ import EpisodesContainer from "./EpisodesContainer";
 import Form from "./Form";
 import { useEffect } from 'react';
 import PageButtons from "./PageButtons";
-import '../styles/EpisodeSection.scss'
+import '../styles/SectionsBackground.scss'
 
 const EpisodeSection = (
     {
@@ -19,7 +19,6 @@ const EpisodeSection = (
         setTotalPages,
     }) => {
 
-
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/episode/?page=${page}&name=${search}`)
             .then((res) => res.json())
@@ -31,7 +30,7 @@ const EpisodeSection = (
     }, [search, page]);
 
     return (
-        <section className="episode__section">
+        <section className="section__characters">
             <Form
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}

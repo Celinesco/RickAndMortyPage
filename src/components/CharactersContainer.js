@@ -1,6 +1,6 @@
 import CharacterCard from './CharacterCard'
 import '../styles/CardContainer.scss';
-import EpisodeCard from './EpisodeCard'
+
 
 
 

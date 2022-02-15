@@ -1,7 +1,9 @@
 form {
-    background: rgb(0, 0, 0);
-    width: 40%;
+    background-image: url(../rickandmorty.jpg);
+    width: 50%;
     display: flex;
+    border: 1px solid #04855d;;
+    box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76) ;
     justify-content: center;
     align-items: center;
     border-radius: 10px;

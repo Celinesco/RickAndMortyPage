@@ -83,26 +83,41 @@ const App = () => {
         nextPage={nextPage}
         lastPage={lastPage}
         setTotalPages={setTotalPages}
-        setSearchedResults = {setSearchedResults}
-        searchedResults = {searchedResults}
-
+        setSearchedResults={setSearchedResults}
+        searchedResults={searchedResults}
       />}
+      
       {episodeSection && <EpisodeSection
-          input={inputValue}
-          search={search}
-          page={page}
-          totalPages={totalPages}
-          handleOnChange={handleOnChange}
-          handleClick={handleClick}
-          firstPage={firstPage}
-          previousPage={previousPage}
-          nextPage={nextPage}
-          lastPage={lastPage}
-          setTotalPages={setTotalPages}
-          setSearchedResults = {setSearchedResults}
-          searchedResults = {searchedResults}
+        input={inputValue}
+        search={search}
+        page={page}
+        totalPages={totalPages}
+        handleOnChange={handleOnChange}
+        handleClick={handleClick}
+        firstPage={firstPage}
+        previousPage={previousPage}
+        nextPage={nextPage}
+        lastPage={lastPage}
+        setTotalPages={setTotalPages}
+        setSearchedResults={setSearchedResults}
+        searchedResults={searchedResults}
       />}
-      {locationSection && < LocationSection />}
+
+      {locationSection && < LocationSection
+        input={inputValue}
+        search={search}
+        page={page}
+        totalPages={totalPages}
+        handleOnChange={handleOnChange}
+        handleClick={handleClick}
+        firstPage={firstPage}
+        previousPage={previousPage}
+        nextPage={nextPage}
+        lastPage={lastPage}
+        setTotalPages={setTotalPages}
+        setSearchedResults={setSearchedResults}
+        searchedResults={searchedResults}
+      />}
       <Footer />
 
     </div>
