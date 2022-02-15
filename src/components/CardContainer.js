@@ -1,13 +1,14 @@
-import Card from './Card'
+import CharacterCard from './CharacterCard'
 import '../styles/CardContainer.scss';
+import EpisodeCard from './EpisodeCard'
 
 
 
-const CardContainer = ({searchedResults}) => {
+const CharactersContainer = ({searchedResults}) => {
     return (
         <div className='container__cards'>
             {searchedResults.map((result)=> (
-                <Card 
+                <CharacterCard
                 key = {result.id}
                 title = {result.name}
                 img = {result.image}
@@ -17,8 +18,7 @@ const CardContainer = ({searchedResults}) => {
                 />
             ))}
         </div>
-        
     )
 }
 
-export default CardContainer;
+export default CharactersContainer;

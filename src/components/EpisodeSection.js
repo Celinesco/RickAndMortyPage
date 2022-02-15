@@ -1,7 +1,8 @@
-import CardContainer from "./CardContainer";
+import EpisodesContainer from "./EpisodesContainer";
 import Form from "./Form";
 import { useEffect } from 'react';
 import PageButtons from "./PageButtons";
+import '../styles/EpisodeSection.scss'
 
 const EpisodeSection = (
     {
@@ -35,7 +36,7 @@ const EpisodeSection = (
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
-            <CardContainer searchedResults={searchedResults}/>
+            <EpisodesContainer searchedResults={searchedResults}/>
             <PageButtons 
             nextPage={nextPage}
             previousPage={previousPage}

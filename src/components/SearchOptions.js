@@ -6,9 +6,6 @@ import { useState } from 'react';
 const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {
  
     
-
-
-
     return (
         <div className="container__search-options">
           <div className='container__buttons'>

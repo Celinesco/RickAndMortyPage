@@ -1,15 +1,15 @@
 import '../styles/Card.scss'
 
-const Card = ({ title, img, status, location, firstEpisode }) => {
+const CharacterCard = ({ title, img, status, location, firstEpisode }) => {
 
-    // if (status === "unknown") {
-    //     status = "Unknown"
-    // }
+    if (status === "unknown") {
+        status = "Unknown"
+    }
 
     return (
         <article className='card__container'>
             <div className='img__container'>
-                {/* <img src={img}></img> */}
+                <img src={img}></img>
             </div>
             <div className='info__container'>
                 <div className='section'>
@@ -23,13 +23,13 @@ const Card = ({ title, img, status, location, firstEpisode }) => {
                     <p className='subtitle'>Last known location:</p>
                     <p>{location}</p>
                 </div>
-                <div className='section'>
+                {/* <div className='section'>
                     <p className='subtitle'>First seen in:</p>
                     <p>{firstEpisode}</p>
-                </div>
+                </div> */}
             </div>
         </article>
     )
 }
 
-export default Card;
+export default CharacterCard;

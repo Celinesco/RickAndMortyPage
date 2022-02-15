@@ -1,4 +1,4 @@
-import CardContainer from "./CardContainer";
+import CharactersContainer from "./CardContainer";
 import '../styles/CharacterSection.scss'
 import Form from './Form';
 import { useEffect } from 'react';
@@ -40,7 +40,8 @@ const CharacterSection = (
             handleOnChange={handleOnChange}
             handleClick={handleClick}
             />
-            <CardContainer searchedResults={searchedResults}/>
+            <CharactersContainer 
+            searchedResults={searchedResults}/>
             <PageButtons 
             nextPage={nextPage}
             previousPage={previousPage}

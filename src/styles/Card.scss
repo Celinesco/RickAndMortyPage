@@ -12,18 +12,16 @@
     }
     border-right: 3px solid rgb(0, 255, 174);
     border-bottom: 2px solid rgb(45, 107, 87);
- 
- 
+    cursor: pointer;
 }
 
 .img__container {
-    width: 250px;
-    margin-right: 15px;
-    display: flex;   
+    width: 200px;
+    display: flex; 
+    border-right: 5px solid rgb(0, 255, 174); 
+    overflow: hidden;
     img {
-        width: 100%;
         border-radius: 10px 0px 0px 10px;
-        // border-right: 3px solid rgb(0, 255, 174);
     }
 }
 .container__status {
@@ -41,16 +39,46 @@
 }
 
 .info__container {
+    margin-left: 15px;  
     h2 {
-        margin-top: 20px;
+        margin-top: 5px;
+        width: 250px;
         margin-bottom: 0;
         color:rgb(0, 255, 174)
     }
 }
 
+.img__container--episode {
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+    img {
+        height: 100%;
+        position: absolute;
+        left:-40%;
+        z-index: 0;
+    }
+}
+
+.p__episode-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color:rgb(0, 255, 174);
+    z-index: 10;
+    font-size: 40px;
+    top: 52px;
+    left: 51px;
+    background-color: black;
+    width: 117px;
+    height: 65px;
+
+}
+
 .section {
     line-height: 1.2;
     margin-bottom: 10px;
+    
 }
 
 .Alive {
