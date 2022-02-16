@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.scss';
 import CharacterSection from './components/CharacterSection';
 import NavBar from './components/NavBar';
-import MrMeeseeBox from './MrMeeseeBox.png';
+import MrMeeseeksBox from './assets/MrMeeseeksBox.png';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import EpisodeSection from './components/EpisodeSection';
@@ -61,7 +61,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      <NavBar imgBox={MrMeeseeBox} />
+      <NavBar imgBox={MrMeeseeksBox} />
       <div className='container__img-main'>
       </div>
       {mainSection && <MainSection

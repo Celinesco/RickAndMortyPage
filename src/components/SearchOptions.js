@@ -1,6 +1,6 @@
 import '../styles/SearchOptions.scss'
 import ButtonFetch from './ButtonFetch';
-import Mms from '../Mms.png'
+import Mms from '../assets/Mms.png'
 import { useState } from 'react';
 
 const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {

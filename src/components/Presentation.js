@@ -1,4 +1,4 @@
-import MrMeeseeBox from '../MrMeeseeBox.png';
+import MrMeeseeksBox from '../assets/MrMeeseeksBox.png';
 import '../styles/Presentation.scss'
 
 const Presentation = ({handleBoxClick}) => {
@@ -8,7 +8,7 @@ const Presentation = ({handleBoxClick}) => {
                 ...Click on the box...
             </p>
             <button onClick={handleBoxClick}>
-                <img src={MrMeeseeBox}></img>
+                <img src={MrMeeseeksBox}></img>
             </button>
         </div>
 
