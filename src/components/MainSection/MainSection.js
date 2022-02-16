@@ -1,7 +1,7 @@
-import '../styles/MainSection.scss'
-import SearchOptions from './SearchOptions';
+import './MainSection.scss'
+import SearchOptions from '../SearchOptions/SearchOptions';
 import { useState } from 'react';
-import Presentation from './Presentation';
+import Presentation from '../Presentation/Presentation';
 
 const MainSection = ({loadCharacters,loadEpisodes,loadLocations}) => {
     const [visibleOption, setVisibleOption] = useState(false)

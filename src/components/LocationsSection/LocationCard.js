@@ -1,6 +1,6 @@
-import '../styles/Card.scss'
-import typePlanet from '../assets/typePlanet.jpg';
-import dimensionPortal from '../assets/dimensionPortal.png'
+import '../../styles/Card.scss'
+import typePlanet from '../../assets/typePlanet.jpg';
+import dimensionPortal from '../../assets/dimensionPortal.png'
 
 const LocationCard = ({ title, type, dimension }) => {
 

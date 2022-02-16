@@ -1,4 +1,4 @@
-import '../styles/NavBar.scss'
+import './NavBar.scss'
 
 
 const NavBar = ({imgBox, logo}) => {

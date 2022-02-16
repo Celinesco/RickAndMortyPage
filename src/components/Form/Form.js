@@ -1,5 +1,5 @@
-import '../styles/Form.scss'
-import MrMeeseeksSearch from '../assets/Mr_Meeseeks.png'
+import './Form.scss'
+import MrMeeseeksSearch from '../../assets/Mr_Meeseeks.png'
 
 const Form = ({ handleOnChange, handleClick }) => {
 

@@ -1,9 +1,9 @@
-import CharactersContainer from "./CharactersContainer";
-import '../styles/SectionsBackground.scss'
-import Form from './Form';
+import CharactersContainer from "./CharactersContainer/CharactersContainer";
+import '../../styles/SectionsBackground.scss'
+import Form from '../Form/Form';
 import { useEffect, useState } from 'react';
-import PageButtons from "./PageButtons";
-import CharacterDetails from './CharacterDetails';
+import PageButtons from "../PageButtons/PageButtons";
+import CharacterDetails from './CharacterDetails/CharacterDetails';
 
 const CharacterSection = (
     {

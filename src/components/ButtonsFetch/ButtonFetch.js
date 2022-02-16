@@ -1,4 +1,5 @@
-import '../styles/ButtonFetch.scss'
+import './ButtonFetch.scss'
+
 
 const ButtonFetch = ({message, openSection}) => {
     return (

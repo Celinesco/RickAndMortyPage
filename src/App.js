@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import './App.scss';
-import CharacterSection from './components/CharacterSection';
-import NavBar from './components/NavBar';
+import CharacterSection from './components/CharactersSection/CharacterSection';
+import NavBar from './components/NavBar/NavBar';
 import MrMeeseeksBox from './assets/MrMeeseeksBox.png';
-import MainSection from './components/MainSection';
-import Footer from './components/Footer';
-import EpisodeSection from './components/EpisodeSection';
-import LocationSection from './components/LocationSection';
+import MainSection from './components/MainSection/MainSection';
+import Footer from './components/Footer/Footer';
+import EpisodeSection from './components/EpisodesSection/EpisodeSection';
+import LocationSection from './components/LocationsSection/LocationSection';
 
 
 
@@ -128,9 +128,6 @@ export default App;
 // preguntas Male
 
 // / Y como se le pasan parametros a las funciones. (esta pregunta no me acuerdo por que me surgio)
-// para la cantidad de paginas totales, por que tengo que hacer una variable de estado??
-
-
 // Animaciones 
 
 // <a href='https://www.freepik.es/vectores/silueta'>Vector de Silueta creado por freepik - www.freepik.es</a>

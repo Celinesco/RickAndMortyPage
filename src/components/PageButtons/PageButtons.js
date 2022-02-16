@@ -1,4 +1,4 @@
-import '../styles/PageButtons.scss';
+import './PageButtons.scss';
 import { BiChevronsLeft } from 'react-icons/bi';
 import { BiChevronLeft} from 'react-icons/bi';
 import { BiChevronRight } from 'react-icons/bi';

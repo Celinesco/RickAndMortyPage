@@ -1,8 +1,8 @@
 import EpisodesContainer from "./EpisodesContainer";
-import Form from "./Form";
+import Form from "../Form/Form";
 import { useEffect } from 'react';
-import PageButtons from "./PageButtons";
-import '../styles/SectionsBackground.scss'
+import PageButtons from "../PageButtons/PageButtons";
+import '../../styles/SectionsBackground.scss'
 
 const EpisodeSection = (
     {

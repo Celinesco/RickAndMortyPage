@@ -1,5 +1,5 @@
-import MrMeeseeksBox from '../assets/MrMeeseeksBox.png';
-import '../styles/Presentation.scss'
+import MrMeeseeksBox from '../../assets/MrMeeseeksBox.png';
+import './Presentation.scss'
 
 const Presentation = ({handleBoxClick}) => {
     return (

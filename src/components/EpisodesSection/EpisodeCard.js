@@ -1,5 +1,5 @@
-import '../styles/Card.scss';
-import imgEpisodeCard from '../assets/imgEpisodeCard.jpeg';
+import '../../styles/Card.scss';
+import imgEpisodeCard from '../../assets/imgEpisodeCard.jpeg';
 
 const EpisodeCard = ({ number, title, date, episodeCode }) => {
     return (

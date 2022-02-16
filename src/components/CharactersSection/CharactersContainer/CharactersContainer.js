@@ -1,5 +1,5 @@
-import CharacterCard from './CharacterCard'
-import '../styles/CharactersContainer.scss';
+import CharacterCard from '../CharacterCard/CharacterCard'
+import './/CharactersContainer.scss';
 
 
 
