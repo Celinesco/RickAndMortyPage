@@ -19,7 +19,9 @@ const CharacterSection = (
     lastPage,
     setTotalPages,
 }) => { 
-    const [characterDetails, setCharacterDetails] = useState(false)
+
+    const [characterDetailsModal, setCharacterDetailsModal] = useState(false)
+    const [characterId, setCharacterId] = useState(1)
 
     
     useEffect(() => {
@@ -31,19 +33,21 @@ const CharacterSection = (
         })
     }, [search, page]);
 
-    
+  
 
-    const handleCardClick = () => {
-        setCharacterDetails(true)
+    const handleCardClick = (e) => {
+        setCharacterDetailsModal(true)
+        setCharacterId(e.currentTarget.id)
     }
 
     const handleCloseDetails = () => {
-        setCharacterDetails(false)
+        setCharacterDetailsModal(false)
     }
 
     return (
         <section className="section__characters">
-            {characterDetails && <CharacterDetails 
+            {characterDetailsModal && <CharacterDetails 
+            characterId={characterId}
             handleCloseDetails={handleCloseDetails}
             />}
             <Form 
