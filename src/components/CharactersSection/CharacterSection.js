@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
 import CharacterDetails from './CharacterDetails/CharacterDetails';
+import SearchNotFound from "../SerachNotFound/SearchNotFound";
 
 const CharacterSection = (
     {
@@ -22,15 +23,27 @@ const CharacterSection = (
 
     const [characterDetailsModal, setCharacterDetailsModal] = useState(false)
     const [characterId, setCharacterId] = useState(1)
+    const [characterNotFound, setCharacterNotFound] = useState(false)
 
     
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`) 
         .then ((res) => res.json())
         .then ((data) => {
-            setSearchedResults(data.results)
-            setTotalPages(data.info.pages)
+            if (data.results === undefined) {
+                setCharacterNotFound(true)
+                setSearchedResults([])
+            }
+            else {
+                setCharacterNotFound(false)
+                setSearchedResults(data.results)
+                setTotalPages(data.info.pages)
+            }
         })
+        .catch((err)=> {
+            console.log(err)
+        })
+
     }, [search, page]);
 
   
@@ -54,6 +67,7 @@ const CharacterSection = (
             handleOnChange={handleOnChange}
             handleClick={handleClick}
             />
+            {characterNotFound && <SearchNotFound />}
             <CharactersContainer 
             searchedResults={searchedResults}
             handleCardClick={handleCardClick}

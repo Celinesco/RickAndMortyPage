@@ -1,8 +1,9 @@
 import EpisodesContainer from "./EpisodesContainer";
 import Form from "../Form/Form";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
 import '../../styles/SectionsBackground.scss'
+import SearchNotFound from "../SerachNotFound/SearchNotFound";
 
 const EpisodeSection = (
     {
@@ -19,12 +20,22 @@ const EpisodeSection = (
         setTotalPages,
     }) => {
 
+        const [episodeNotFound, setEpisodeNotFound] = useState(false)
+
+
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/episode/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
-                setSearchedResults(data.results)
-                setTotalPages(data.info.pages)
+                if (data.results === undefined) {
+                    setEpisodeNotFound(true)
+                    setSearchedResults([])
+                }
+                else {
+                    setEpisodeNotFound(false)
+                    setSearchedResults(data.results)
+                    setTotalPages(data.info.pages)
+                }
             })
 
     }, [search, page]);
@@ -35,7 +46,10 @@ const EpisodeSection = (
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
-            <EpisodesContainer searchedResults={searchedResults}/>
+            {episodeNotFound && <SearchNotFound />}
+            <EpisodesContainer 
+            searchedResults={searchedResults}
+            />
             <PageButtons 
             nextPage={nextPage}
             previousPage={previousPage}

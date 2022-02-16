@@ -1,8 +1,9 @@
 import LocationsContainer from "./LocationsContainer";
 import Form from "../Form/Form";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
 import '../../styles/SectionsBackground.scss'
+import SearchNotFound from "../SerachNotFound/SearchNotFound";
 
 const LocationSection = (
     {
@@ -19,12 +20,21 @@ const LocationSection = (
         setTotalPages,
     }) => {
 
+        const [locationNotFound, setLocationNotFound] = useState(false)
+
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/location/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
-                setSearchedResults(data.results)
-                setTotalPages(data.info.pages)
+                if (data.results === undefined) {
+                    setLocationNotFound(true)
+                    setSearchedResults([])
+                }
+                else {
+                    setLocationNotFound(false)
+                    setSearchedResults(data.results)
+                    setTotalPages(data.info.pages)
+                }
             })
 
     }, [search, page]);
@@ -36,7 +46,10 @@ const LocationSection = (
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
-            <LocationsContainer searchedResults={searchedResults}/>
+            {locationNotFound && <SearchNotFound />}
+            <LocationsContainer 
+            searchedResults={searchedResults}
+            />
             <PageButtons
                 nextPage={nextPage}
                 previousPage={previousPage}

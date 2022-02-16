@@ -1,0 +1,17 @@
+.container__notfoundsearch {
+    padding: 50px;
+    margin: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px inset #00ffae;
+    box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76);
+}
+
+.h2__searchnotfound {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
