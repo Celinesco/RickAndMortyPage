@@ -47,3 +47,14 @@ section {
     border-bottom: 1px solid rgb(4, 133, 93);
     box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76) ;
 }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }

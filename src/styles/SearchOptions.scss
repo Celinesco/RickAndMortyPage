@@ -3,7 +3,7 @@
     flex-direction: column-reverse;
     align-items: center;
     animation-name: fadeIn;
-    animation-duration: 1s;
+    animation-duration: .8s;
     animation-timing-function: linear;
 }
 
@@ -34,13 +34,3 @@
         width: 100%;
     }
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-  
-    to {
-        opacity: 1;
-    }
-  }

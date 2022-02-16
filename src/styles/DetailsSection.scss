@@ -10,6 +10,10 @@
     width: 100vw;
     z-index: 20;
     color:white;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
 }
 .container__modal-info {
     font-family: 'Courier New', Courier, monospace;
