@@ -3,10 +3,23 @@ import typePlanet from '../typePlanet.jpg';
 import dimensionPortal from '../dimensionPortal.png'
 
 const LocationCard = ({ title, type, dimension }) => {
+
+    let srcImage = dimensionPortal;
+   
+    if (type === "Planet") {
+        srcImage = typePlanet
+    }
+    if (type === "Space station" ) {
+        srcImage = "https://i.imgur.com/Y4STROih.jpg"
+    }
+    if (type === "Microverse") {
+        srcImage = "https://i1.sndcdn.com/artworks-000497904960-qwenkp-t500x500.jpg"
+    }
+
     return (
         <article className='card__container'>
             <div className='img__container'>
-                <img src={type === "Planet" ? typePlanet : dimensionPortal }/>
+                <img src={srcImage}/>
             </div>
             <div className='info__container'>
                 <div className='section'>
