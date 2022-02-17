@@ -8,14 +8,23 @@ import MainSection from "../MainSection/MainSection";
 
 
 const NavBar = ({ imgBox }) => {
-  
+
     const [inputValue, setInputValue] = useState("");
     const [search, setSearch] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [searchedResults, setSearchedResults] = useState([]);
+    const [visibleOption, setVisibleOption] = useState(false)
+    const [visibleBox, setVisibleBox] = useState(true)
 
-  
+    const handleBoxClick = () => {
+        setVisibleBox(false)
+        setVisibleOption(true)
+    }
+    const handleClickLogo = () => {
+        setVisibleBox(true)
+        setVisibleOption(false)
+    }
     const handleOnChange = (e) => {
         setInputValue(e.target.value)
     };
@@ -41,21 +50,25 @@ const NavBar = ({ imgBox }) => {
     return (
         <BrowserRouter>
             <nav className='navbar'>
-                <button className='container__box-mrmeeseeks'>
+                <button onClick={handleBoxClick} className='container__box-mrmeeseeks'>
                     <img src={imgBox}></img>
                 </button>
-                <Link to="/"><p className='p__logo'>
+                <Link onClick={handleClickLogo} to="/"><p className='p__logo'>
                     Rick and Morty
                 </p>
                 </Link>
                 <ul className='navbar__ul'>
-                    <li><Link onClick={()=>setPage(1)} to="/characters">CHARACTERS</Link></li>
-                    <li><Link onClick={()=>setPage(1)} to="/episodes">EPISODES</Link></li>
-                    <li><Link onClick={()=> setPage(1)} to="/locations">LOCATIONS</Link></li>
+                    <li><Link onClick={() => setPage(1)} to="/characters">CHARACTERS</Link></li>
+                    <li><Link onClick={() => setPage(1)} to="/episodes">EPISODES</Link></li>
+                    <li><Link onClick={() => setPage(1)} to="/locations">LOCATIONS</Link></li>
                 </ul>
             </nav>
             <Routes>
-                <Route path="*" element={<MainSection />} />
+                <Route path="*" element={<MainSection
+                    visibleBox={visibleBox}
+                    visibleOption={visibleOption}
+                    handleBoxClick={handleBoxClick}/>}
+                />
                 <Route path="/characters"
                     element={<CharacterSection
                         input={inputValue}
@@ -70,7 +83,7 @@ const NavBar = ({ imgBox }) => {
                         lastPage={lastPage}
                         setTotalPages={setTotalPages}
                         setSearchedResults={setSearchedResults}
-                        searchedResults={searchedResults} />} 
+                        searchedResults={searchedResults} />}
                 />
                 <Route path="/episodes"
                     element={<EpisodeSection
@@ -86,7 +99,7 @@ const NavBar = ({ imgBox }) => {
                         lastPage={lastPage}
                         setTotalPages={setTotalPages}
                         setSearchedResults={setSearchedResults}
-                        searchedResults={searchedResults} />} 
+                        searchedResults={searchedResults} />}
                 />
                 <Route path="/locations"
                     element={<LocationSection
