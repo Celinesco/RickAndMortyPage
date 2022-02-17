@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: black;
     box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76) ;
@@ -11,11 +11,10 @@
 }
 
 .navbar__ul {
-    padding: 25px;
     display: flex;
+    padding: 0;
     li  {
-        margin: 10px;
-       
+        margin: 0px 10px;
     }
     a {
         color: #00ffae;
@@ -23,9 +22,7 @@
 }
 
 .container__box-mrmeeseeks {
-    margin-left: 40px;
     width: 80px;
-
     img {
         width:100%;
     }
@@ -33,16 +30,14 @@
 
 .p__logo {
     position: relative;
-    left:5%;
     color: white;
+    left:30%;
     font-family: RickAndMorty;
     font-size: 50px;
     animation-name: sombra;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-   
-  
 }
 
 @keyframes sombra {
