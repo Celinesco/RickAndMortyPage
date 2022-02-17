@@ -14,8 +14,8 @@ const CharactersContainer = ({searchedResults, handleCardClick}) => {
                 title = {result.name}
                 img = {result.image}
                 status = {result.status}
-                location = {result.location.name}
-                firstEpisode = {result.episode[0]}
+                location = {result?.location?.name}
+                firstEpisode = {result.episode?.at(0)}
                 handleCardClick={handleCardClick}
                 />
             ))}

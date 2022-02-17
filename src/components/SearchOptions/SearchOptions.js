@@ -2,7 +2,7 @@ import './SearchOptions.scss'
 import ButtonFetch from '../ButtonsFetch/ButtonFetch';
 import Mms from '../../assets/Mms.png'
 
-const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {
+const SearchOptions = () => {
  
     
     return (
@@ -12,21 +12,21 @@ const SearchOptions = ({loadCharacters, loadEpisodes, loadLocations}) => {
                 Find your favorite Character
                 <ButtonFetch 
                 message="Go!" 
-                openSection={loadCharacters} 
+                route="/characters" 
                 />
             </div>
             <div className="option__container">
                 Looking for an episode?
                 <ButtonFetch 
                 message="Click here" 
-                openSection={loadEpisodes}
+                route="/episodes"
              />
             </div>
             <div className="option__container">
                 Searching for your next vacation-destiny?
                 <ButtonFetch 
                 message="Get on board" 
-                openSection={loadLocations}
+                route="/locations"
                 />
             </div>
           </div>

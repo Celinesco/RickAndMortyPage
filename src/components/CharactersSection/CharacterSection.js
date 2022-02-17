@@ -40,10 +40,6 @@ const CharacterSection = (
                 setTotalPages(data.info.pages)
             }
         })
-        .catch((err)=> {
-           
-        })
-
     }, [search, page]);
 
   

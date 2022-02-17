@@ -49,7 +49,7 @@ const CharacterDetails = ({ img, handleCloseDetails, characterId }) => {
                         <section className='column__episodes'>
                             <h3 className='h3__column-episodes'>Seen in episodes:</h3>
                             <div className='container__episodes'>
-                                {characterInfo && characterInfo.episode &&
+                                {characterInfo?.episode &&
                                     <p>
                                         {characterInfo.episode.map((episodio) => {
                                             const textoAimprimir = episodio.replace('https://rickandmortyapi.com/api/episode/', " ")

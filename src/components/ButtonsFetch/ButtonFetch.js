@@ -1,11 +1,21 @@
-import './ButtonFetch.scss'
+import './ButtonFetch.scss';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 
-const ButtonFetch = ({message, openSection}) => {
+const ButtonFetch = ({ message, route }) => {
+
     return (
-        <button onClick={openSection} className='button__fetch'>
-            {message}
-        </button>
+        <div>
+            <Link to={route} className='button__fetch'>
+                {message}
+            </Link>
+            <Routes>
+                <Route path={route}/>
+            </Routes>
+
+
+        </div>
+
     )
 }
 

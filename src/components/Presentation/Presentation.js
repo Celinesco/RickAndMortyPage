@@ -15,4 +15,4 @@ const Presentation = ({handleBoxClick}) => {
     )
 }
 
-export default Presentation
+export default Presentation;

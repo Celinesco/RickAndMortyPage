@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CharacterSection from "../CharactersSection/CharacterSection";
 import EpisodeSection from "../EpisodesSection/EpisodeSection";
 import LocationSection from "../LocationsSection/LocationSection";
-import SearchOptions from "../SearchOptions/SearchOptions";
 import './NavBar.scss'
 import { useState } from "react";
 import MainSection from "../MainSection/MainSection";
@@ -42,9 +41,9 @@ const NavBar = ({ imgBox }) => {
     return (
         <BrowserRouter>
             <nav className='navbar'>
-                <Link to="/search&options" className='container__box-mrmeeseeks'>
+                <button className='container__box-mrmeeseeks'>
                     <img src={imgBox}></img>
-                </Link>
+                </button>
                 <Link to="/"><p className='p__logo'>
                     Rick and Morty
                 </p>
@@ -56,8 +55,7 @@ const NavBar = ({ imgBox }) => {
                 </ul>
             </nav>
             <Routes>
-                <Route path="/" element={<MainSection />} />
-                <Route path="/search&options" element={<MainSection />} />
+                <Route path="*" element={<MainSection />} />
                 <Route path="/characters"
                     element={<CharacterSection
                         input={inputValue}

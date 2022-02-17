@@ -3,7 +3,6 @@ import '../../../styles/Card.scss';
 
 const CharacterCard = ({title, img, status, location, firstEpisode, handleCardClick, id}) => {
     
-   
     if (status === "unknown") {
         status = "Unknown"
     }
