@@ -24,7 +24,7 @@ const CharacterSection = (
     const [characterDetailsModal, setCharacterDetailsModal] = useState(false)
     const [characterId, setCharacterId] = useState(1)
     const [characterNotFound, setCharacterNotFound] = useState(false)
-
+    
     
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`) 
@@ -48,7 +48,6 @@ const CharacterSection = (
         setCharacterDetailsModal(true)
         setCharacterId(e.currentTarget.id)
     }
-
     const handleCloseDetails = () => {
         setCharacterDetailsModal(false)
     }

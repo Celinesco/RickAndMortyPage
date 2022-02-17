@@ -49,9 +49,9 @@ const NavBar = ({ imgBox }) => {
                 </p>
                 </Link>
                 <ul className='navbar__ul'>
-                    <li><Link to="/characters">CHARACTERS</Link></li>
-                    <li><Link to="/episodes">EPISODES</Link></li>
-                    <li><Link to="/locations">LOCATIONS</Link></li>
+                    <li><Link onClick={()=>setPage(1)} to="/characters">CHARACTERS</Link></li>
+                    <li><Link onClick={()=>setPage(1)} to="/episodes">EPISODES</Link></li>
+                    <li><Link onClick={()=> setPage(1)} to="/locations">LOCATIONS</Link></li>
                 </ul>
             </nav>
             <Routes>
