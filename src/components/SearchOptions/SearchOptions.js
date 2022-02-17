@@ -3,11 +3,9 @@ import ButtonFetch from '../ButtonsFetch/ButtonFetch';
 import Mms from '../../assets/Mms.png'
 
 const SearchOptions = () => {
- 
-    
     return (
         <div className="container__search-options">
-          <div className='container__buttons'>
+          <div className='container__options'>
           <div className="option__container">
                 Find your favorite Character
                 <ButtonFetch 

@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 const ButtonFetch = ({ message, route }) => {
 
     return (
-        <div>
+        <div className='container__buttonsfetch'>
             <Link to={route} className='button__fetch'>
                 {message}
             </Link>

@@ -8,7 +8,7 @@
     animation-timing-function: linear;
 }
 
-.container__buttons {
+.container__options {
     display: flex;
     margin-top: 40px;
 }
@@ -24,8 +24,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 20px;
+    height: 190px;
 }
 
 .container__img-mrmeeseeks {
