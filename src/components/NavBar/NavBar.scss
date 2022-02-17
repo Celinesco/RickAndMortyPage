@@ -8,9 +8,6 @@
     height: 170px;
     z-index: 3;
     border-bottom: 1px solid #04855d;
-    button {
-        margin-left: 20px;
-    }
 }
 
 .navbar__ul {
@@ -26,6 +23,7 @@
 }
 
 .container__box-mrmeeseeks {
+    margin-left: 40px;
     width: 80px;
 
     img {

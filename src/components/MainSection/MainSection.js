@@ -3,23 +3,21 @@ import SearchOptions from '../SearchOptions/SearchOptions';
 import { useState } from 'react';
 import Presentation from '../Presentation/Presentation';
 
-const MainSection = ({loadCharacters,loadEpisodes,loadLocations}) => {
+const MainSection = () => {
     const [visibleOption, setVisibleOption] = useState(false)
     const [visibleBox, setVisibleBox] = useState(true)
 
     const handleBoxClick = () => {
         setVisibleBox(false)
-        setVisibleOption(true)  
+        setVisibleOption(true)
     }
 
     return (
         <section className='section__main'>
-            {visibleBox && <Presentation handleBoxClick={handleBoxClick}/>}
-            {visibleOption && <SearchOptions 
-             loadCharacters = {loadCharacters}
-             loadEpisodes = {loadEpisodes}
-             loadLocations = {loadLocations}
-            />}
+            {visibleBox && <Presentation handleBoxClick={handleBoxClick} />}
+            {visibleOption && <div className='container__img-main'></div>}
+            {visibleOption && <SearchOptions />}
+
         </section>
     )
 }

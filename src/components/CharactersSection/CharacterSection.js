@@ -41,7 +41,7 @@ const CharacterSection = (
             }
         })
         .catch((err)=> {
-            console.log(err)
+           
         })
 
     }, [search, page]);
