@@ -160,7 +160,25 @@
     .container__info-bottompart {
         flex-direction: column;
     }
+    
+    .container__notfoundsearch {
+        max-width: 480px;
+        padding: 20px;
+    }
 
+    .container__img-notfound {
+        overflow: hidden ;
+        width: 300px;
+        img {
+            position: relative;
+            right:75px;
+            width:150%
+        }
+    }
+
+    .h2__searchnotfound {
+        font-size: 30px;
+    }
 
  }
 
