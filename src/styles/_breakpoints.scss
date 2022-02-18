@@ -73,7 +73,7 @@
         padding: 5px 10px;
     }
 
-    //form 
+    //form && sections
     .form {
         width:120%;
     }
@@ -84,8 +84,8 @@
     .card__container {
         max-width: 140px;
         flex-direction: column;
-        .img__container {
-            width:100%;
+        .container__img-character {
+            width: 100%;
             border: none;
             img {
                 width: 100%;
@@ -105,10 +105,35 @@
             width: auto;
         }
     }
+
+    .container__episode-card {
+        .info__container {
+            height: 100px;
+            h2 {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    .img__container--episode {
+        width: 140px;
+        height: 150px;
+        border: none;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    
+    .p__episode-number {
+        top: 30px;
+        width: 71px;
+        height: 39px;
+        font-size: 30px;
+        left:16px
+    }
     //modaldetailcharacter 
 
     .container__details-section {
-      
        height: 100%;
     }
     .container__modal-info {

@@ -11,7 +11,7 @@ const CharacterCard = ({title, img, status, location, firstEpisode, handleCardCl
 
     return (
         <article onClick={handleCardClick} className='card__container' id={id}>
-            <div className='img__container'>
+            <div className='img__container container__img-character'>
                 <img src={img}></img>
             </div>
             <div className='info__container'>
