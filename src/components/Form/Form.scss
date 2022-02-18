@@ -1,4 +1,4 @@
-form {
+.form {
     background-image: url(../../assets/rickandmorty.jpg);
     width: 50%;
     display: flex;
@@ -30,3 +30,6 @@ form {
         width: 100%;
     }
 }
+
+
+@import '../../styles/breakpoints'

@@ -9,7 +9,7 @@ const Form = ({ handleOnChange, handleClick }) => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
             <div className='container__labelinput'>
                 <label htmlFor="character-search">Search</label>
                     <input id="character-search" type="text" onChange={handleOnChange}></input>

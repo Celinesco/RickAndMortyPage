@@ -15,21 +15,21 @@ const CharacterCard = ({title, img, status, location, firstEpisode, handleCardCl
                 <img src={img}></img>
             </div>
             <div className='info__container'>
-                <div className='section'>
+                <div className='section section-title'>
                 <h2>{title}</h2>
-                <div className='container__status'>
+                <div className='section container__status'>
                     <div className={status}></div>
                     <p>{status}</p>
                 </div>
                 </div>
-                <div className='section'>
+                <div className='section container__location'>
                     <p className='subtitle'>Last known location:</p>
                     <p>{location}</p>
                 </div>
-                <div className='section'>
+                {/* <div className='section'>
                     <p className='subtitle'>First seen in:</p>
                     <p>{firstEpisode}</p>
-                </div>
+                </div> */}
             </div>
         </article>
     )
