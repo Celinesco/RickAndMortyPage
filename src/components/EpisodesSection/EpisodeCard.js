@@ -4,7 +4,7 @@ import imgEpisodeCard from '../../assets/imgEpisodeCard.jpeg';
 const EpisodeCard = ({ number, title, date, episodeCode }) => {
     return (
         <article className='card__container container__episode-card'>
-            <div className='img__container img__container--episode'>
+            <div className='img__container container__img-episode '>
                 <p className='p__episode-number'>{number}</p>
                 <img src={imgEpisodeCard}></img>
             </div>
