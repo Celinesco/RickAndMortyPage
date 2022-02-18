@@ -26,10 +26,10 @@ const CharacterCard = ({title, img, status, location, firstEpisode, handleCardCl
                     <p className='subtitle'>Last known location:</p>
                     <p>{location}</p>
                 </div>
-                {/* <div className='section'>
+                <div className='section'>
                     <p className='subtitle'>First seen in:</p>
                     <p>{firstEpisode}</p>
-                </div> */}
+                </div>
             </div>
         </article>
     )
