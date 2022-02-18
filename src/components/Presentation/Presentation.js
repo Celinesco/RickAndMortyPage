@@ -7,7 +7,7 @@ const Presentation = ({handleBoxClick}) => {
             <p className='p__presentation'>
                 ...Click on the box...
             </p>
-            <button onClick={handleBoxClick}>
+            <button className='container__img-presentation' onClick={handleBoxClick}>
                 <img src={MrMeeseeksBox}></img>
             </button>
         </div>
