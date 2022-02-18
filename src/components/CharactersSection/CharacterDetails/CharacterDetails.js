@@ -1,4 +1,4 @@
-import './DetailsSection.scss';
+import './CharacterDetails.scss';
 import { BsXLg } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 

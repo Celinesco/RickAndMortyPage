@@ -105,6 +105,19 @@
             width: auto;
         }
     }
+    //modaldetailcharacter 
+
+    .container__details-section {
+      
+       height: 100%;
+    }
+    .container__modal-info {
+        height: 100%;
+        overflow: scroll;
+    }
+    .container__info-bottompart {
+        flex-direction: column;
+    }
 
 
  }
