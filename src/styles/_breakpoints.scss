@@ -82,6 +82,7 @@
     }
 
     .card__container {
+        overflow: hidden;
         max-width: 140px;
         flex-direction: column;
         .container__img-character {
@@ -113,7 +114,24 @@
                 font-size: 15px;
             }
         }
+    }
+    .container__location-card {
+        .info__container {
+            height: 20px;
+            h2 {
+                font-size: 15px;
+            }
+        }
+    }
 
+    .container__img-location {
+        width: 140px;
+        border: none;
+        img {
+            border-radius: 10px 10px 0px 0px;
+            width: 100%;
+            
+        }
     }
 
     .img__container--episode {

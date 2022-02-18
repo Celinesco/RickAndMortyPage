@@ -17,19 +17,19 @@ const LocationCard = ({ title, type, dimension }) => {
     }
 
     return (
-        <article className='card__container'>
-            <div className='img__container'>
+        <article className='card__container container__location-card'>
+            <div className='img__container container__img-location'>
                 <img src={srcImage}/>
             </div>
             <div className='info__container'>
-                <div className='section'>
+                <div className='section section-title'>
                     <h2>{title}</h2>
                 </div>
-                <div className='section'>
+                <div className='section container__status'>
                     <p className='subtitle'>Type</p>
                     <p>{type}</p>
                 </div>
-                <div className='section'>
+                <div className='section container__location'>
                     <p className='subtitle'>Dimension</p>
                     <p>{dimension}</p>
                 </div>
