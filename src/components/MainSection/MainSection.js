@@ -1,6 +1,5 @@
 import './MainSection.scss'
 import SearchOptions from '../SearchOptions/SearchOptions';
-import { useState } from 'react';
 import Presentation from '../Presentation/Presentation';
 
 const MainSection = ({visibleBox, visibleOption, handleBoxClick}) => {

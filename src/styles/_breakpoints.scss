@@ -37,6 +37,41 @@
     .container__img-presentation {
         max-width: 200px;
     }
+    //mainsection
+    .section__main {
+        height: 90%;
+    }
+    .container__img-main {
+        height: 190px;
+        background-size: 800px;
+        background-position-y:-18cm;
+    }
+
+    .container__options {
+        flex-direction: column;
+    }
+    .container__search-options {
+        margin: 80px 0;
+        .p__presentation {
+            margin-bottom: 20px;
+        }
+    }
+    .container__img-mrmeeseeks {
+        max-width : 200px;
+        img {
+            width: 100%;
+        }
+    }
+    .option__container {
+        font-size: 15px;
+        max-width: 180px;
+        height: 120px;
+        margin: 5px 0;
+    }
+
+    .button__fetch {
+        padding: 5px 10px;
+    }
 
 
  }
