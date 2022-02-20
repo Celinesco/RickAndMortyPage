@@ -1,4 +1,5 @@
-import '../../../styles/Card.scss';
+import '../../styles/Card.scss';
+
 
 
 const CharacterCard = ({ title, img, status, location, firstEpisode, handleCardClick, id }) => {

@@ -1,13 +1,8 @@
-import { BrowerRouter, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
 import './App.scss';
-import CharacterSection from './components/CharactersSection/CharacterSection';
 import NavBar from './components/NavBar/NavBar';
 import MrMeeseeksBox from './assets/MrMeeseeksBox.png';
-import MainSection from './components/MainSection/MainSection';
 import Footer from './components/Footer/Footer';
-import EpisodeSection from './components/EpisodesSection/EpisodeSection';
-import LocationSection from './components/LocationsSection/LocationSection';
+
 
 
 
