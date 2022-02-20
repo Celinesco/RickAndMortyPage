@@ -1,13 +1,42 @@
 
 
 
-// // Medium devices (tablets, less than 992px)
-// @media (max-width: 991.98px) { ... }
 
 // // Large devices (desktops, less than 1200px)
 // @media (max-width: 1199.98px) { ... }
 
 // @media (max-width: 1399.98px) { ... }
+
+
+
+ @media (max-width: 991.98px) { 
+    .p__logo {
+        width: 150px;
+        text-align: center;
+        margin-left: 15px;
+        font-size: 30px;
+    }
+    .container__presentation {
+        height: 100vh;
+    }
+    .card__container {
+        max-width: 450px;
+    }
+    .info__container {
+        width: 200px;
+        h2 {
+            width: auto;
+        }
+    }
+    .form {
+        width: 90%;
+    }
+    .container__episode-card, .container__location-card {
+        h2 {
+            font-size: 20px;
+        }
+    }
+ }
 
 @media (max-width: 767.98px) { 
     .navbar__ul, .container__box-mrmeeseeks {
@@ -16,12 +45,6 @@
      .navbar {
        justify-content: space-between; 
        height: 130px;
-    }
-    .p__logo {
-        width: 150px;
-        text-align: center;
-        margin-left: 15px;
-        font-size: 30px;
     }
     .container__presentation {
         height: 90vh;
@@ -43,7 +66,6 @@
     .button__menunavbar {
         display: none;
     }
-
  }
 
 @media (max-width: 575.98px) {   
