@@ -10,8 +10,8 @@ const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setP
     return (
         <div>
             <nav className='navbar'>
-                <Link to="/">
-                    <button onClick={handleBoxClick} className='container__box-mrmeeseeks'>
+                <Link to="/" className='container__box-mrmeeseeks'>
+                    <button onClick={handleBoxClick} >
                         <img src={imgBox}></img>
                     </button>
                 </Link>

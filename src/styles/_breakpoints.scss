@@ -7,9 +7,9 @@
 // @media (max-width: 1399.98px) { ... }
 
 
-@media (max-width: 1199.98px) { 
+// @media (max-width: 1199.98px) { 
    
-}
+// }
 
 
  @media (max-width: 991.98px) { 
@@ -44,7 +44,7 @@
         display: none;
     }
      .navbar {
-       justify-content: space-between; 
+       justify-content: space-around; 
        height: 130px;
     }
     .container__presentation {
