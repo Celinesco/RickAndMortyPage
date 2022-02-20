@@ -2,11 +2,14 @@
 
 
 
-// // Large devices (desktops, less than 1200px)
-// @media (max-width: 1199.98px) { ... }
+
 
 // @media (max-width: 1399.98px) { ... }
 
+
+@media (max-width: 1199.98px) { 
+   
+}
 
 
  @media (max-width: 991.98px) { 
@@ -16,9 +19,7 @@
         margin-left: 15px;
         font-size: 30px;
     }
-    .container__presentation {
-        height: 100vh;
-    }
+   
     .card__container {
         max-width: 450px;
     }
@@ -124,6 +125,7 @@
         }
     }
     .info__container {
+        width: auto;
         margin:0;
         margin-top: 5px;
         display: flex;
@@ -140,7 +142,11 @@
             height: 100px;
             h2 {
                 font-size: 15px;
+                margin:0;
             }
+        }
+        .section-title {
+            justify-content: center;
         }
     }
     .container__location-card {

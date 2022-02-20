@@ -30,3 +30,5 @@ export default App;
 // Animaciones 
 
 // <a href='https://www.freepik.es/vectores/silueta'>Vector de Silueta creado por freepik - www.freepik.es</a>
+
+// https://media.giphy.com/media/l0Iyei5MxFUMpoPAI/giphy.gif
