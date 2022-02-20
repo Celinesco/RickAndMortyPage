@@ -9,16 +9,11 @@
 
 // @media (max-width: 1399.98px) { ... }
 
-@media (min-width: 575.98px) { 
-    .button__menunavbar {
+@media (max-width: 767.98px) { 
+    .navbar__ul, .container__box-mrmeeseeks {
         display: none;
     }
- }
-
-
-@media (max-width: 575.98px) { 
-    //navbar
-    .navbar {
+     .navbar {
        justify-content: space-between; 
        height: 130px;
     }
@@ -28,19 +23,33 @@
         margin-left: 15px;
         font-size: 30px;
     }
-    .navbar__ul, .container__box-mrmeeseeks {
-        display: none;
-    }
-    // presentation
     .container__presentation {
         height: 90vh;
         align-items: center;
         text-align: center;
     }
+    .container__options {
+        flex-direction: column;
+    }
+    .option__container {
+        margin: 20px 0;
+    }
+    .form {
+        width: 120%;
+    }
+ }
+
+@media (min-width: 767.98px) { 
+    .button__menunavbar {
+        display: none;
+    }
+
+ }
+
+@media (max-width: 575.98px) {   
     .p__presentation {
         font-size: 35px;
     }
-
     .container__img-presentation {
         max-width: 200px;
     }
@@ -52,10 +61,6 @@
         height: 190px;
         background-size: 800px;
         background-position-y:-18cm;
-    }
-
-    .container__options {
-        flex-direction: column;
     }
     .container__search-options {
         margin: 80px 0;
@@ -79,15 +84,10 @@
     .button__fetch {
         padding: 5px 10px;
     }
-
     //form && sections
-    .form {
-        width:120%;
-    }
     .container__status, .container__location, .hide-mobile {
         display: none;
     }
-
     .card__container {
         overflow: hidden;
         max-width: 140px;
@@ -113,7 +113,6 @@
             width: auto;
         }
     }
-
     .container__episode-card {
         .info__container {
             height: 100px;
@@ -130,7 +129,6 @@
             }
         }
     }
-
     .container__img-location {
         width: 140px;
         border: none;
@@ -139,7 +137,6 @@
             width: 100%; 
         }
     }
-
     .container__img-episode {
         position: relative;
         width: 140px;
@@ -151,7 +148,6 @@
             left:-25%
         }
     }
-
     .p__episode-number {
         top: 30px;
         width: 69px;
@@ -171,12 +167,10 @@
     .container__info-bottompart {
         flex-direction: column;
     }
-    
     .container__notfoundsearch {
         max-width: 480px;
         padding: 20px;
     }
-
     .container__img-notfound {
         overflow: hidden ;
         width: 300px;
@@ -186,7 +180,6 @@
             width:150%
         }
     }
-
     .h2__searchnotfound {
         font-size: 30px;
     }
