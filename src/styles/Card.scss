@@ -32,10 +32,10 @@
         height: 10px;
         border-radius: 100%;
     }
-    p {
-        margin:0;
-        margin-left: 5px;
-    }
+    
+}
+.subtitle {
+    margin:0;
 }
 
 .info__container {
@@ -48,7 +48,7 @@
     }
 }
 
-.img__container--episode {
+.container__img-episode {
     position: relative;
     border-radius: 10px 0px 0px 10px;
     img {
@@ -65,20 +65,20 @@
     align-items: center;
     position: absolute;
     color:rgb(0, 255, 174);
-    z-index: 10;
+    z-index: 1;
     font-size: 40px;
     top: 52px;
     left: 51px;
     background-color: black;
     width: 117px;
     height: 65px;
-
 }
 
 .section {
+    display: flex;
+    flex-direction: column;
     line-height: 1.2;
     margin-bottom: 10px;
-    
 }
 
 .Alive {

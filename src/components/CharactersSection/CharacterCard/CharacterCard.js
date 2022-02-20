@@ -1,8 +1,8 @@
 import '../../../styles/Card.scss';
 
 
-const CharacterCard = ({title, img, status, location, firstEpisode, handleCardClick, id}) => {
-    
+const CharacterCard = ({ title, img, status, location, firstEpisode, handleCardClick, id }) => {
+
     if (status === "unknown") {
         status = "Unknown"
     }
@@ -16,11 +16,14 @@ const CharacterCard = ({title, img, status, location, firstEpisode, handleCardCl
             </div>
             <div className='info__container'>
                 <div className='section section-title'>
-                <h2>{title}</h2>
-                <div className='section container__status'>
-                    <div className={status}></div>
-                    <p>{status}</p>
-                </div>
+                    <h2>{title}</h2>
+                    <div className='section'>
+                        <div className='container__status'>
+                            <div className={status}></div>
+                            <p>{status}</p>
+                        </div>
+
+                    </div>
                 </div>
                 <div className='section container__location'>
                     <p className='subtitle'>Last known location:</p>

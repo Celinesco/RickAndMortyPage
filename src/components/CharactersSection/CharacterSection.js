@@ -1,5 +1,4 @@
 import CharactersContainer from "./CharactersContainer/CharactersContainer";
-import '../../styles/SectionsBackground.scss'
 import Form from '../Form/Form';
 import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";

@@ -2,7 +2,6 @@ import EpisodesContainer from "./EpisodesContainer";
 import Form from "../Form/Form";
 import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
-import '../../styles/SectionsBackground.scss'
 import SearchNotFound from "../SerachNotFound/SearchNotFound";
 
 const EpisodeSection = (

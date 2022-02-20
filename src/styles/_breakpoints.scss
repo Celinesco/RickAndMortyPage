@@ -1,5 +1,5 @@
 
-// @media (max-width: 767.98px) { ... }
+
 
 // // Medium devices (tablets, less than 992px)
 // @media (max-width: 991.98px) { ... }
@@ -8,6 +8,13 @@
 // @media (max-width: 1199.98px) { ... }
 
 // @media (max-width: 1399.98px) { ... }
+
+@media (min-width: 575.98px) { 
+    .button__menunavbar {
+        display: none;
+    }
+ }
+
 
 @media (max-width: 575.98px) { 
     //navbar
@@ -77,7 +84,7 @@
     .form {
         width:120%;
     }
-    .container__status, .container__location {
+    .container__status, .container__location, .hide-mobile {
         display: none;
     }
 
@@ -134,19 +141,23 @@
     }
 
     .container__img-episode {
+        position: relative;
         width: 140px;
         height: 150px;
         border: none;
         border-radius: 10px 10px 0px 0px;
+        img {
+            position: absolute;
+            left:-25%
+        }
     }
 
-    
     .p__episode-number {
         top: 30px;
-        width: 71px;
+        width: 69px;
         height: 39px;
         font-size: 30px;
-        left:16px;
+        left:39px;
     }
     //modaldetailcharacter 
 

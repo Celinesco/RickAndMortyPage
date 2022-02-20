@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard'
-import './/CharactersContainer.scss';
+
 
 
 

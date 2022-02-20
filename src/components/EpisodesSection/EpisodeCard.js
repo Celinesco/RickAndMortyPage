@@ -12,7 +12,7 @@ const EpisodeCard = ({ number, title, date, episodeCode }) => {
                 <div className='section section-title'>
                     <h2>{title}</h2>
                 </div>
-                <div className='section container__status'>
+                <div className='section hide-mobile'>
                     <p className='subtitle'>Released date</p>
                     <p>{date}</p>
 

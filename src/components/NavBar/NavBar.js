@@ -5,6 +5,8 @@ import LocationSection from "../LocationsSection/LocationSection";
 import './NavBar.scss'
 import { useState } from "react";
 import MainSection from "../MainSection/MainSection";
+import { BiMenu } from "react-icons/bi";
+import NavBarMenu from '../NavBarMenu/NavBarMenu'
 
 
 const NavBar = ({ imgBox }) => {
@@ -15,12 +17,19 @@ const NavBar = ({ imgBox }) => {
     const [totalPages, setTotalPages] = useState(1);
     const [searchedResults, setSearchedResults] = useState([]);
     const [visibleOption, setVisibleOption] = useState(false)
-    const [visibleBox, setVisibleBox] = useState(true)
+    const [visibleBox, setVisibleBox] = useState(true);
+    const [navMenu, setNavMenu] = useState(false);
 
+    
     const handleBoxClick = () => {
         setVisibleBox(false)
         setVisibleOption(true)
     }
+    const handleClickLinkMenu = () => {
+        setPage(1)
+        setNavMenu(false)
+    }
+    
     const handleClickLogo = () => {
         setVisibleBox(true)
         setVisibleOption(false)
@@ -57,6 +66,10 @@ const NavBar = ({ imgBox }) => {
                     Rick and Morty
                 </p>
                 </Link>
+                <button className="button__menunavbar" onClick={()=> setNavMenu(true)}><BiMenu /></button>
+                {navMenu && <NavBarMenu 
+                handleClickLinkMenu={handleClickLinkMenu}
+                setNavMenu={setNavMenu}/>}
                 <ul className='navbar__ul'>
                     <li><Link onClick={() => setPage(1)} to="/characters">CHARACTERS</Link></li>
                     <li><Link onClick={() => setPage(1)} to="/episodes">EPISODES</Link></li>

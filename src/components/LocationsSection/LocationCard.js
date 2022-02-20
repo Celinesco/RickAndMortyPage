@@ -25,7 +25,7 @@ const LocationCard = ({ title, type, dimension }) => {
                 <div className='section section-title'>
                     <h2>{title}</h2>
                 </div>
-                <div className='section container__status'>
+                <div className='section hide-mobile'>
                     <p className='subtitle'>Type</p>
                     <p>{type}</p>
                 </div>
