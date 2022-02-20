@@ -1,5 +1,5 @@
 import './NavBarMenu.scss'
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiX } from "react-icons/bi";
 
 const NavBarMenu = ({handleClickLinkMenu, setNavMenu}) => {
@@ -12,12 +12,6 @@ const NavBarMenu = ({handleClickLinkMenu, setNavMenu}) => {
                     <li><Link onClick={handleClickLinkMenu} to="/episodes">EPISODES</Link></li>
                     <li><Link onClick={handleClickLinkMenu} to="/locations">LOCATIONS</Link></li>
             </ul>
-            <Routes>
-                <Route path="*"/>
-                <Route path="characters"/>
-                <Route path="episodes"/>
-                <Route path="locations"/>
-            </Routes>
         </nav>
     )
 }
