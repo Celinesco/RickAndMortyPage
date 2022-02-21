@@ -33,10 +33,10 @@ const EpisodeDetails = () => {
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/${stringCharacters}`)
             .then(res => res.json())
-            .then(data => setCharactersInEpisode(data))
+            .then(data => Array.isArray(data) && setCharactersInEpisode(data))
     }, [obtenerPersonajes])
 
-    console.log(charactersInEpisode)
+
 
     return (
         <section className="section__episode-details">
@@ -45,25 +45,25 @@ const EpisodeDetails = () => {
                 <h3 className="color-font__detail-section">Name: {detallesEpisodio.name}</h3>
                 <h3 className="color-font__detail-section">Release date: {detallesEpisodio.air_date}</h3>
                 <h3 className="color-font__detail-section">Characters in this episode:</h3>
-               
-                    {Array.isArray(charactersInEpisode) && 
-                    <div> 
-                          {charactersInEpisode.map((character) => {
-                            <article className='card__container'>
-                                <div className='img__container container__img-character'>
-                                    <img src={character.image}></img>
+
+
+                <div>
+                    {charactersInEpisode.map((character) => {
+                        <article className='card__container' key={character.id}>
+                            <div className='img__container container__img-character'>
+                                <img src={character.image}></img>
+                            </div>
+                            <div className='info__container'>
+                                <div className='section section-title'>
+                                    <h2>{character.name}</h2>
                                 </div>
-                                <div className='info__container'>
-                                    <div className='section section-title'>
-                                        <h2>{character.name}</h2>
-                                    </div>
-                                </div>
-                            </article>
-                        })}
-                         </div>
-                }
-              
-                
+                            </div>
+                        </article>
+                    })}
+                </div>
+
+
+
 
 
             </article>
