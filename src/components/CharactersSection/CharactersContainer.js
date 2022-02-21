@@ -6,17 +6,6 @@ import CharacterCard from './CharacterCard'
 
 
 const CharactersContainer = ({searchedResults, handleCardClick}) => {
-    const [episodes, setEpisodes] = useState([])
-
-    const urlEpisodeArrays = searchedResults.map ((resultado)=> {
-         return resultado?.episode?.at(0)
-    })
-
-    const numerosDeEpisodios = urlEpisodeArrays.map((url)=> {
-        return (url.replace('https://rickandmortyapi.com/api/episode/', " "))
-    })
-
-
 
     return (
         <div className='container__cards'>

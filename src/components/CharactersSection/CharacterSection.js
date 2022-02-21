@@ -23,7 +23,6 @@ const CharacterSection = (
     const [characterDetailsModal, setCharacterDetailsModal] = useState(false)
     const [characterId, setCharacterId] = useState(1)
     const [characterNotFound, setCharacterNotFound] = useState(false)
-    const [primerEpisodio, setPrimerEpisodio] = useState("")
     
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`) 

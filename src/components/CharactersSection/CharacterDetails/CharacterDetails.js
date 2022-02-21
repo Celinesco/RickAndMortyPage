@@ -3,7 +3,7 @@ import { BsXLg } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 
 
-const CharacterDetails = ({ img, handleCloseDetails, characterId }) => {
+const CharacterDetails = ({ handleCloseDetails, characterId }) => {
     const [characterInfo, setCharacterInfo] = useState({})
 
     useEffect(() => {
@@ -11,7 +11,6 @@ const CharacterDetails = ({ img, handleCloseDetails, characterId }) => {
             .then((res) => res.json())
             .then((data) => {
                 setCharacterInfo(data)
-                console.log(data)
             })
 
     }, [characterId])
@@ -24,7 +23,7 @@ const CharacterDetails = ({ img, handleCloseDetails, characterId }) => {
                     <div className='container__details-img'>
                         <img src={characterInfo.image}></img>
                     </div>
-                    <h2>{characterInfo.name}</h2>
+                    <h2>{characterInfo?.name}</h2>
                 </div>
                 <div className='container__info-bottompart'>
                     <div className='column'>
@@ -32,7 +31,7 @@ const CharacterDetails = ({ img, handleCloseDetails, characterId }) => {
                             <h3 className='h3__info-character'>Status</h3>
                             <p>{characterInfo.status}</p>
                         </section>
-                        {characterInfo && characterInfo.location && characterInfo.location.name && <section>
+                        {characterInfo?.location?.name && <section>
                             <h3 className='h3__info-character'>Location</h3>
                             <p>{characterInfo.location.name}</p>
                         </section>}

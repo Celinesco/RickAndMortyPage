@@ -27,7 +27,6 @@ const App = () => {
   const handleBoxClick = () => {
     setVisibleBox(false)
     setVisibleOption(true)
-    console.log("hola")
   }
   const handleClickLinkMenu = () => {
     setPage(1)
