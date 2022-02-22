@@ -16,10 +16,13 @@ const LocationSection = (
         nextPage,
         previousPage,
         lastPage,
+        totalPages,
         setTotalPages,
+        totalResults,
+        setTotalResults
     }) => {
 
-        const [locationNotFound, setLocationNotFound] = useState(false)
+    const [locationNotFound, setLocationNotFound] = useState(false)
 
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/location/?page=${page}&name=${search}`)
@@ -33,6 +36,7 @@ const LocationSection = (
                     setLocationNotFound(false)
                     setSearchedResults(data.results)
                     setTotalPages(data.info.pages)
+                    setTotalResults(data.info.count)
                 }
             })
 
@@ -40,16 +44,18 @@ const LocationSection = (
 
 
     return (
-        <section className="section__characters">
+        <section className="sections__styles">
             <Form
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
             {locationNotFound && <SearchNotFound />}
-            <LocationsContainer 
-            searchedResults={searchedResults}
+            <LocationsContainer
+                searchedResults={searchedResults}
             />
             <PageButtons
+                page={page}
+                totalPages={totalPages}
                 nextPage={nextPage}
                 previousPage={previousPage}
                 lastPage={lastPage}

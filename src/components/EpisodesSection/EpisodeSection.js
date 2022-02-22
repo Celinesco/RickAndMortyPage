@@ -16,7 +16,10 @@ const EpisodeSection = (
         nextPage,
         previousPage,
         lastPage,
+        totalPages,
         setTotalPages,
+        totalResults,
+        setTotalResults
     }) => {
 
         const [episodeNotFound, setEpisodeNotFound] = useState(false)
@@ -34,13 +37,14 @@ const EpisodeSection = (
                     setEpisodeNotFound(false)
                     setSearchedResults(data.results)
                     setTotalPages(data.info.pages)
+                    setTotalResults(data.info.count)
                 }
             })
 
     }, [search, page]);
 
     return (
-        <section className="section__characters">
+        <section className="sections__styles">
             <Form
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
@@ -48,8 +52,11 @@ const EpisodeSection = (
             {episodeNotFound && <SearchNotFound />}
             <EpisodesContainer 
             searchedResults={searchedResults}
+            totalResults={totalResults}
             />
             <PageButtons 
+            page={page}
+            totalPages={totalPages}
             nextPage={nextPage}
             previousPage={previousPage}
             lastPage = {lastPage}
