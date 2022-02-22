@@ -51,6 +51,7 @@ const EpisodeSection = (
             />
             {searchNotFound && <SearchNotFound />}
             <EpisodesContainer 
+            searchNotFound={searchNotFound}
             searchedResults={searchedResults}
             totalResults={totalResults}
             />

@@ -54,6 +54,7 @@ const LocationSection = (
             <LocationsContainer
                 searchedResults={searchedResults}
                 totalResults={totalResults}
+                searchNotFound={searchNotFound}
             />
             {!searchNotFound && <PageButtons
                 page={page}
