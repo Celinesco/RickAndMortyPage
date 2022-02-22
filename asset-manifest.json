@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RickAndMortyPage/static/css/main.32f686ca.css",
-    "main.js": "/RickAndMortyPage/static/js/main.ca86b778.js",
+    "main.css": "/RickAndMortyPage/static/css/main.4b4befb0.css",
+    "main.js": "/RickAndMortyPage/static/js/main.663e8167.js",
     "static/js/787.8d34ff08.chunk.js": "/RickAndMortyPage/static/js/787.8d34ff08.chunk.js",
     "static/media/dimensionPortal.png": "/RickAndMortyPage/static/media/dimensionPortal.a218ca229093de6f08d2.png",
     "static/media/rickandmorty.jpg": "/RickAndMortyPage/static/media/rickandmorty.2145312058bcf6c1b5ea.jpg",
@@ -13,12 +13,12 @@
     "static/media/get_schwifty.ttf": "/RickAndMortyPage/static/media/get_schwifty.c3d1dfc692e3547fed16.ttf",
     "static/media/MrMeeseeksBox.png": "/RickAndMortyPage/static/media/MrMeeseeksBox.e7e0972dd6376fb21fdd.png",
     "index.html": "/RickAndMortyPage/index.html",
-    "main.32f686ca.css.map": "/RickAndMortyPage/static/css/main.32f686ca.css.map",
-    "main.ca86b778.js.map": "/RickAndMortyPage/static/js/main.ca86b778.js.map",
+    "main.4b4befb0.css.map": "/RickAndMortyPage/static/css/main.4b4befb0.css.map",
+    "main.663e8167.js.map": "/RickAndMortyPage/static/js/main.663e8167.js.map",
     "787.8d34ff08.chunk.js.map": "/RickAndMortyPage/static/js/787.8d34ff08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32f686ca.css",
-    "static/js/main.ca86b778.js"
+    "static/css/main.4b4befb0.css",
+    "static/js/main.663e8167.js"
   ]
 }
