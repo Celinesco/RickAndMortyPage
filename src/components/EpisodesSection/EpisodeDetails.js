@@ -40,6 +40,7 @@ const EpisodeDetails = () => {
                 <p className='p__episode-number'>{episodeDetails.id}</p>
                 <img src={imgEpisodeCard}></img>
             </div>
+            <div className='container__info-section-details' >
                 <div className="row">
                     <h3 className="color-font__detail-section">Name: </h3>
                     <p className="info-detail-section">{episodeDetails.name}</p>
@@ -52,7 +53,7 @@ const EpisodeDetails = () => {
                     <h3 className="color-font__detail-section">Episode code: </h3>
                     <p className="info-detail-section">{episodeDetails.episode}</p>
                 </div>
-
+            </div>
                 <h3 className="color-font__detail-section">Characters in this episode:</h3>
                 <div className="container__cards-section-episode">
                     {charactersInEpisode.map((character) => (

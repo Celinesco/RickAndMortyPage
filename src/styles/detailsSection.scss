@@ -8,7 +8,7 @@
 
 .row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .info-detail-section {
@@ -28,6 +28,7 @@
 .h2__title-section {
     font-size: 40px;
     margin: 20px 0;
+    text-align: center;
 }
 
 .container__cards-section-episode {
@@ -117,7 +118,7 @@
 
 .container__img-episode-detail {
     position: relative;
-    max-width: 650px;
+    width: 650px;
     img {
         width: 100%;
         border: 5px outset rgb(0, 255, 174);
@@ -134,6 +135,10 @@
     }
 }
 
+.container__info-section-details {
+    display: flex;
+    flex-direction: column;
+}
 
 .episode-related { 
     position: relative;

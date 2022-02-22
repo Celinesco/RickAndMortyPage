@@ -195,6 +195,30 @@
     .h2__searchnotfound {
         font-size: 30px;
     }
+    .section__details {
+        padding: 30px;
+    }
+
+    .container__info-section-details {
+       
+        h3 {
+            width: 100px;
+        }
+      
+    }
+    .container__img-episode-detail {
+        width: 320px;
+        
+        .p__episode-number {
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            width: 97px;
+            height: 53px;
+            left: 110px;
+            top:48px
+        }
+    }
 
  }
 

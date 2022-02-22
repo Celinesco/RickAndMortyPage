@@ -36,19 +36,20 @@ const CharacterDetails = () => {
             <div className='container__img-details-section'>
                 <img src={characterDetails.image}></img>
             </div>
-            <div className="row">
-                <h3 className="color-font__detail-section">Name: </h3>
-                <p className="info-detail-section">{characterDetails.name}</p>
+            <div className='container__info-section-details' >
+                <div className="row">
+                    <h3 className="color-font__detail-section">Name: </h3>
+                    <p className="info-detail-section">{characterDetails.name}</p>
+                </div>
+                <div className="row">
+                    <h3 className="color-font__detail-section">Status: </h3>
+                    <p className="info-detail-section">{characterDetails.status}</p>
+                </div>
+                <div className="row">
+                    <h3 className="color-font__detail-section">Last Location: </h3>
+                    <p className="info-detail-section">{characterDetails?.location?.name}</p>
+                </div>
             </div>
-            <div className="row">
-                <h3 className="color-font__detail-section">Status: </h3>
-                <p className="info-detail-section">{characterDetails.status}</p>
-            </div>
-            <div className="row">
-                <h3 className="color-font__detail-section">Last Location: </h3>
-                <p className="info-detail-section">{characterDetails?.location?.name}</p>
-            </div>
-
             <h3 className="color-font__detail-section">You can find {characterDetails.name} in:</h3>
             <div className="container__cards-section-details container__cards-section-details-episodes ">
                 {Array.isArray(appearsInEpisode)
@@ -72,7 +73,7 @@ const CharacterDetails = () => {
                     : <Link to={`/episodes/${appearsInEpisode.id}`} key={appearsInEpisode.id}>
                         <article className='card__container-related-section card__container-related-section-character' key={appearsInEpisode.id}>
                             <div className='episode-related'>
-                            <p className='p__episode-number'>{appearsInEpisode.id}</p>
+                                <p className='p__episode-number'>{appearsInEpisode.id}</p>
                                 <img src={imgEpisodeCard}></img>
                             </div>
                             <div className='info__container'>
