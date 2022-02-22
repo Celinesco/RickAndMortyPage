@@ -2,7 +2,7 @@ import './SearchOptions.scss'
 import ButtonFetch from '../ButtonsFetch/ButtonFetch';
 import Mms from '../../assets/Mms.png'
 
-const SearchOptions = () => {
+const SearchOptions = ({resetValues}) => {
     return (
         <div className="container__search-options">
           <div className='container__options'>
@@ -11,6 +11,7 @@ const SearchOptions = () => {
                 <ButtonFetch 
                 message="Go!" 
                 route="/characters" 
+                resetValues={resetValues}
                 />
             </div>
             <div className="option__container">
@@ -18,6 +19,7 @@ const SearchOptions = () => {
                 <ButtonFetch 
                 message="Click here" 
                 route="/episodes"
+                resetValues={resetValues}
              />
             </div>
             <div className="option__container">
@@ -25,6 +27,7 @@ const SearchOptions = () => {
                 <ButtonFetch 
                 message="Get on board" 
                 route="/locations"
+                resetValues={resetValues}
                 />
             </div>
           </div>

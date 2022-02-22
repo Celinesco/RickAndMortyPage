@@ -1,12 +1,12 @@
 import './ButtonFetch.scss';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 
-const ButtonFetch = ({ message, route }) => {
+const ButtonFetch = ({ message, route, resetValues }) => {
 
     return (
         <div className='container__buttonsfetch'>
-            <Link to={route} className='button__fetch'>
+            <Link to={route} onClick={resetValues} className='button__fetch'>
                 {message}
             </Link>
             <Routes>

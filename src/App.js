@@ -72,7 +72,7 @@ const App = () => {
     <div className='App'>
       <BrowserRouter>
         <NavBar
-        resetValues={resetValues}
+          resetValues={resetValues}
           imgBox={MrMeeseeksBox}
           handleClickLogo={handleClickLogo}
           handleClickLinkMenu={handleClickLinkMenu}
@@ -83,6 +83,7 @@ const App = () => {
         />
         <Routes>
           <Route path="*" element={<MainSection
+            resetValues={resetValues}
             visibleBox={visibleBox}
             visibleOption={visibleOption}
             handleBoxClick={handleBoxClick} />}
