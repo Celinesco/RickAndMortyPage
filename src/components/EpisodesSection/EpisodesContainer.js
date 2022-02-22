@@ -5,13 +5,13 @@ const EpisodesContainer = ({ searchedResults }) => {
     return (
         <div className='container__cards'>
             {searchedResults.map((result) => (
-               <Link to={`/episodes/${result.id}`}> <EpisodeCard
-                    key={result.id}
-                    number={result.id}
-                    title={result.name}
-                    date={result.air_date}
-                    episodeCode={result.episode}
-                />
+                <Link to={`/episodes/${result.id}`} key={result.id}>
+                    <EpisodeCard
+                        number={result.id}
+                        title={result.name}
+                        date={result.air_date}
+                        episodeCode={result.episode}
+                    />
                 </Link>
             ))}
         </div>

@@ -9,6 +9,7 @@ import LocationSection from "./components/LocationsSection/LocationSection";
 import { useState } from "react";
 import MainSection from "./components/MainSection/MainSection";
 import EpisodeDetails from './components/EpisodesSection/EpisodeDetails'
+import CharacterDetails from './components/CharactersSection/CharacterDetails/CharacterDetails';
 
 
 
@@ -94,6 +95,7 @@ const App = () => {
               setSearchedResults={setSearchedResults}
               searchedResults={searchedResults} />}
           />
+          <Route path='/characters/:idCharacter' element={<CharacterDetails />}/> 
           <Route path="/episodes"
             element={<EpisodeSection
               input={inputValue}

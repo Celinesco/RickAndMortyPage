@@ -1,0 +1,72 @@
+.section__details {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.info-detail-section {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.color-font__detail-section {
+    color: rgb(0, 255, 174);
+    font-size: 22px;
+}
+.h2__title-section {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.container__cards-section-episode {
+    display: flex;
+    max-width: 1820px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 10px;
+   
+}
+
+.card__container-related-section{
+    flex-direction: column;
+    border-radius: 10px;
+    border-right: 4px solid rgb(0, 255, 174);
+    border-bottom: 2px solid rgb(45, 107, 87);
+    margin: 20px 10px;
+    .info__container {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2 {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        font-size: 17px;
+        height: 60px;
+        max-width: 100px;
+    }
+}
+
+.container__img-character-related-section {
+    width: 150px;
+    border: none;
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0 ;
+    }
+}

@@ -2,7 +2,7 @@ import '../../styles/Card.scss';
 
 
 
-const CharacterCard = ({ title, img, status, location, firstEpisode, handleCardClick, id }) => {
+const CharacterCard = ({ title, img, status, location, firstEpisode }) => {
 
     if (status === "unknown") {
         status = "Unknown"
@@ -11,7 +11,7 @@ const CharacterCard = ({ title, img, status, location, firstEpisode, handleCardC
 
 
     return (
-        <article onClick={handleCardClick} className='card__container' id={id}>
+        <article className='card__container'>
             <div className='img__container container__img-character'>
                 <img src={img}></img>
             </div>
