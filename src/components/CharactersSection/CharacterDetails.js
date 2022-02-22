@@ -56,7 +56,7 @@ const CharacterDetails = () => {
                     ? (appearsInEpisode.length == 51
                         ? <div className='info-detail-section'> in every episode!! </div>
                         : appearsInEpisode.map((episode) => (
-                            <Link to={`/episodes/${episode.id}`} key={episode.id}>
+                            <Link to={`/RickAndMortyPage/episodes/${episode.id}`} key={episode.id}>
                                 <article className='card__container-related-section card__container-related-section-character' >
                                     <div className='episode-related'>
                                         <p className='p__episode-number'>{episode.id}</p>
@@ -70,7 +70,7 @@ const CharacterDetails = () => {
                                 </article>
                             </Link>
                         )))
-                    : <Link to={`/episodes/${appearsInEpisode.id}`} key={appearsInEpisode.id}>
+                    : <Link to={`/RickAndMortyPage/episodes/${appearsInEpisode.id}`} key={appearsInEpisode.id}>
                         <article className='card__container-related-section card__container-related-section-character' key={appearsInEpisode.id}>
                             <div className='episode-related'>
                                 <p className='p__episode-number'>{appearsInEpisode.id}</p>
