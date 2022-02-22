@@ -9,7 +9,7 @@ import LocationSection from "./components/LocationsSection/LocationSection";
 import { useState } from "react";
 import MainSection from "./components/MainSection/MainSection";
 import EpisodeDetails from './components/EpisodesSection/EpisodeDetails'
-import CharacterDetails from './components/CharactersSection/CharacterDetails/CharacterDetails';
+import CharacterDetails from './components/CharactersSection/CharacterDetails';
 
 
 

@@ -2,7 +2,6 @@ import CharactersContainer from "./CharactersContainer";
 import Form from '../Form/Form';
 import { useEffect, useState } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
-import CharacterDetails from './CharacterDetails/CharacterDetails';
 import SearchNotFound from "../SerachNotFound/SearchNotFound";
 
 const CharacterSection = (
@@ -20,8 +19,7 @@ const CharacterSection = (
     setTotalPages,
 }) => { 
 
-    const [characterDetailsModal, setCharacterDetailsModal] = useState(false)
-    const [characterId, setCharacterId] = useState(1)
+
     const [characterNotFound, setCharacterNotFound] = useState(false)
     
     useEffect(() => {
@@ -40,20 +38,9 @@ const CharacterSection = (
         })
     }, [search, page]);
   
-    const handleCardClick = (e) => {
-        setCharacterDetailsModal(true)
-        setCharacterId(e.currentTarget.id)
-    }
-    const handleCloseDetails = () => {
-        setCharacterDetailsModal(false)
-    }
 
     return (
         <section className="section__characters">
-            {characterDetailsModal && <CharacterDetails 
-            characterId={characterId}
-            handleCloseDetails={handleCloseDetails}
-            />}
             <Form 
             handleOnChange={handleOnChange}
             handleClick={handleClick}
@@ -61,7 +48,6 @@ const CharacterSection = (
             {characterNotFound && <SearchNotFound />}
             <CharactersContainer 
             searchedResults={searchedResults}
-            handleCardClick={handleCardClick}
             />
             <PageButtons 
             nextPage={nextPage}

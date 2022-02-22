@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import '../../styles/detailsSection.scss';
+import imgEpisodeCard from '../../assets/imgEpisodeCard.jpeg';
 
 
 
@@ -35,7 +36,10 @@ const EpisodeDetails = () => {
     return (
         <section className="section__details">
             <h2 className="h2__title-section color-font__detail-section">EPISODE DETAILS</h2>
-            <div>
+            <div className='container__img-episode-detail'>
+                <p className='p__episode-number'>{episodeDetails.id}</p>
+                <img src={imgEpisodeCard}></img>
+            </div>
                 <div className="row">
                     <h3 className="color-font__detail-section">Name: </h3>
                     <p className="info-detail-section">{episodeDetails.name}</p>
@@ -45,32 +49,27 @@ const EpisodeDetails = () => {
                     <p className="info-detail-section">{episodeDetails.air_date}</p>
                 </div>
                 <div className="row">
-                <h3 className="color-font__detail-section">Episode code: </h3>
-                <p className="info-detail-section">{episodeDetails.episode}</p>
+                    <h3 className="color-font__detail-section">Episode code: </h3>
+                    <p className="info-detail-section">{episodeDetails.episode}</p>
                 </div>
-             
+
                 <h3 className="color-font__detail-section">Characters in this episode:</h3>
                 <div className="container__cards-section-episode">
                     {charactersInEpisode.map((character) => (
-                        <article className='card__container-related-section' key={character.id}>
-                            <div className='container__img-character-related-section '>
-                                <img src={character.image}></img>
-                            </div>
-                            <div className='info__container'>
-                                <div className='section section-title'>
-                                    <h2>{character.name}</h2>
+                        <Link to={`/characters/${character.id}`} key={character.id} >
+                            <article className='card__container-related-section' >
+                                <div className='container__img-related-section'>
+                                    <img src={character.image}></img>
                                 </div>
-                            </div>
-                        </article>
+                                <div className='info__container'>
+                                    <div className='section section-title'>
+                                        <h2>{character.name}</h2>
+                                    </div>
+                                </div>
+                            </article>
+                        </Link>
                     ))}
                 </div>
-
-
-
-
-
-
-            </div>
         </section>
     )
 }
