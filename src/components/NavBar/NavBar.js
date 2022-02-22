@@ -5,7 +5,7 @@ import NavBarMenu from '../NavBarMenu/NavBarMenu'
 
 
 
-const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setPage, handleBoxClick, navMenu }) => {
+const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setPage, handleBoxClick, navMenu, resetValues }) => {
 
     return (
         <div>
@@ -25,9 +25,9 @@ const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setP
                     handleClickLinkMenu={handleClickLinkMenu}
                     setNavMenu={setNavMenu} />}
                 <ul className='navbar__ul'>
-                    <li><Link onClick={() => setPage(1)} to="/characters">CHARACTERS</Link></li>
-                    <li><Link onClick={() => setPage(1)} to="/episodes">EPISODES</Link></li>
-                    <li><Link onClick={() => setPage(1)} to="/locations">LOCATIONS</Link></li>
+                    <li><Link onClick={resetValues} to="/characters">CHARACTERS</Link></li>
+                    <li><Link onClick={resetValues} to="/episodes">EPISODES</Link></li>
+                    <li><Link onClick={resetValues} to="/locations">LOCATIONS</Link></li>
                 </ul>
             </nav>
         </div>

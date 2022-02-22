@@ -28,6 +28,11 @@ const App = () => {
   const [searchNotFound, setSearchNotFound] = useState(false)
 
 
+  const resetValues = () => {
+    setPage(1)
+    setSearch([])
+
+  }
   const handleBoxClick = () => {
     setVisibleBox(false)
     setVisibleOption(true)
@@ -67,6 +72,7 @@ const App = () => {
     <div className='App'>
       <BrowserRouter>
         <NavBar
+        resetValues={resetValues}
           imgBox={MrMeeseeksBox}
           handleClickLogo={handleClickLogo}
           handleClickLinkMenu={handleClickLinkMenu}
