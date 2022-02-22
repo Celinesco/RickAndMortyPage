@@ -88,7 +88,7 @@ const App = () => {
             visibleOption={visibleOption}
             handleBoxClick={handleBoxClick} />}
           />
-          <Route path="/RickAndMortyPage/characters"
+          <Route path='/RickAndMortyPage/characters'
             element={<CharacterSection
               input={inputValue}
               search={search}
@@ -109,7 +109,7 @@ const App = () => {
               setTotalResults={setTotalResults} />}
           />
           <Route path='/RickAndMortyPage/characters/:idCharacter' element={<CharacterDetails />} />
-          <Route path="/episodes"
+          <Route path='/RickAndMortyPage/episodes'
             element={<EpisodeSection
               input={inputValue}
               search={search}
@@ -130,7 +130,7 @@ const App = () => {
               setTotalResults={setTotalResults} />}
           />
           <Route path='/RickAndMortyPage/episodes/:idEpisode' element={<EpisodeDetails />} />
-          <Route path="/locations"
+          <Route path='/RickAndMortyPage/locations'
             element={<LocationSection
               input={inputValue}
               search={search}
