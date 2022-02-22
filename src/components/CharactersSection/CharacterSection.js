@@ -16,7 +16,10 @@ const CharacterSection = (
     nextPage, 
     previousPage, 
     lastPage,
+    totalPages,
     setTotalPages,
+    totalResults,
+    setTotalResults
 }) => { 
 
 
@@ -34,6 +37,7 @@ const CharacterSection = (
                 setCharacterNotFound(false)
                 setSearchedResults(data.results)
                 setTotalPages(data.info.pages)
+                setTotalResults(data.info.count)
             }
         })
     }, [search, page]);
@@ -48,8 +52,11 @@ const CharacterSection = (
             {characterNotFound && <SearchNotFound />}
             <CharactersContainer 
             searchedResults={searchedResults}
+            totalResults={totalResults}
             />
             <PageButtons 
+            page={page}
+            totalPages={totalPages}
             nextPage={nextPage}
             previousPage={previousPage}
             lastPage = {lastPage}

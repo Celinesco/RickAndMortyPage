@@ -24,6 +24,7 @@ const App = () => {
   const [visibleOption, setVisibleOption] = useState(false)
   const [visibleBox, setVisibleBox] = useState(true);
   const [navMenu, setNavMenu] = useState(false);
+  const [totalResults, setTotalResults] = useState(0)
 
 
   const handleBoxClick = () => {
@@ -93,7 +94,9 @@ const App = () => {
               lastPage={lastPage}
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults} />}
+              searchedResults={searchedResults}
+              totalResults={totalResults}
+              setTotalResults={setTotalResults} />}
           />
           <Route path='/characters/:idCharacter' element={<CharacterDetails />}/> 
           <Route path="/episodes"

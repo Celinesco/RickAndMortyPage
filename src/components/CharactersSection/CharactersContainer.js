@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom'
 
 
 
-const CharactersContainer = ({ searchedResults}) => {
+const CharactersContainer = ({ searchedResults, totalResults }) => {
     return (
         <div className='container__cards'>
+            <div className='row'>
+                <h3 className='total-results'>Results:</h3>
+                <div className="cantidad-resultados">{totalResults} Characters</div>
+            </div>
+
             {searchedResults.map((result) => (
                 <Link to={`/characters/${result.id}`} key={result.id}>
                     <CharacterCard

@@ -18,3 +18,16 @@
         box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76);
     }
 }
+
+.container__total-pages {
+    width: 90px;
+    display: flex;
+}
+
+.total-pages {
+    text-align: center;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    margin: 0 
+}
