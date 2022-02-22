@@ -9,6 +9,8 @@ const EpisodeSection = (
         search,
         setSearchedResults,
         searchedResults,
+        searchNotFound,
+        setSearchNotFound,
         handleOnChange,
         handleClick,
         page,
@@ -22,19 +24,17 @@ const EpisodeSection = (
         setTotalResults
     }) => {
 
-        const [episodeNotFound, setEpisodeNotFound] = useState(false)
-
-
+   
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/episode/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.results === undefined) {
-                    setEpisodeNotFound(true)
+                    setSearchNotFound(true)
                     setSearchedResults([])
                 }
                 else {
-                    setEpisodeNotFound(false)
+                    setSearchNotFound(false)
                     setSearchedResults(data.results)
                     setTotalPages(data.info.pages)
                     setTotalResults(data.info.count)
@@ -49,19 +49,19 @@ const EpisodeSection = (
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
-            {episodeNotFound && <SearchNotFound />}
+            {searchNotFound && <SearchNotFound />}
             <EpisodesContainer 
             searchedResults={searchedResults}
             totalResults={totalResults}
             />
-            <PageButtons 
+            {!searchNotFound && <PageButtons 
             page={page}
             totalPages={totalPages}
             nextPage={nextPage}
             previousPage={previousPage}
             lastPage = {lastPage}
             firstPage={firstPage}
-            />
+            />}
         </section>
     )
 }

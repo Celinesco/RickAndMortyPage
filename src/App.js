@@ -24,7 +24,8 @@ const App = () => {
   const [visibleOption, setVisibleOption] = useState(false)
   const [visibleBox, setVisibleBox] = useState(true);
   const [navMenu, setNavMenu] = useState(false);
-  const [totalResults, setTotalResults] = useState(0)
+  const [totalResults, setTotalResults] = useState(0);
+  const [searchNotFound, setSearchNotFound] = useState(false)
 
 
   const handleBoxClick = () => {
@@ -95,10 +96,12 @@ const App = () => {
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
               searchedResults={searchedResults}
+              searchNotFound={searchNotFound}
+              setSearchNotFound={setSearchNotFound}
               totalResults={totalResults}
               setTotalResults={setTotalResults} />}
           />
-          <Route path='/characters/:idCharacter' element={<CharacterDetails />}/> 
+          <Route path='/characters/:idCharacter' element={<CharacterDetails />} />
           <Route path="/episodes"
             element={<EpisodeSection
               input={inputValue}
@@ -113,11 +116,13 @@ const App = () => {
               lastPage={lastPage}
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
+              searchNotFound={searchNotFound}
+              setSearchNotFound={setSearchNotFound}
               searchedResults={searchedResults}
               totalResults={totalResults}
               setTotalResults={setTotalResults} />}
           />
-          <Route path='/episodes/:idEpisode' element={<EpisodeDetails />}/> 
+          <Route path='/episodes/:idEpisode' element={<EpisodeDetails />} />
           <Route path="/locations"
             element={<LocationSection
               input={inputValue}
@@ -133,8 +138,10 @@ const App = () => {
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
               searchedResults={searchedResults}
+              searchNotFound={searchNotFound}
+              setSearchNotFound={setSearchNotFound}
               totalResults={totalResults}
-              setTotalResults={setTotalResults} 
+              setTotalResults={setTotalResults}
             />}
           />
         </Routes>
@@ -143,7 +150,7 @@ const App = () => {
       </BrowserRouter>
 
 
- 
+
 
     </div>
   );

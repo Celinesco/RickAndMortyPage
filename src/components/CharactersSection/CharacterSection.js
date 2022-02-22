@@ -9,6 +9,8 @@ const CharacterSection = (
         search,
         setSearchedResults,
         searchedResults,
+        searchNotFound,
+        setSearchNotFound,
         handleOnChange,
         handleClick,
         page,
@@ -23,18 +25,16 @@ const CharacterSection = (
     }) => {
 
 
-    const [characterNotFound, setCharacterNotFound] = useState(false)
-
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.results === undefined) {
-                    setCharacterNotFound(true)
+                    setSearchNotFound(true)
                     setSearchedResults([])
                 }
                 else {
-                    setCharacterNotFound(false)
+                    setSearchNotFound(false)
                     setSearchedResults(data.results)
                     setTotalPages(data.info.pages)
                     setTotalResults(data.info.count)
@@ -49,19 +49,20 @@ const CharacterSection = (
                 handleOnChange={handleOnChange}
                 handleClick={handleClick}
             />
-            {characterNotFound && <SearchNotFound />}
+            {searchNotFound && <SearchNotFound />}
             <CharactersContainer
+                searchNotFound={searchNotFound}
                 searchedResults={searchedResults}
                 totalResults={totalResults}
             />
-            <PageButtons
+            {!searchNotFound && <PageButtons
                 page={page}
                 totalPages={totalPages}
                 nextPage={nextPage}
                 previousPage={previousPage}
                 lastPage={lastPage}
                 firstPage={firstPage}
-            />
+            />}
         </section>
 
     )
