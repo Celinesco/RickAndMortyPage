@@ -113,7 +113,9 @@ const App = () => {
               lastPage={lastPage}
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults} />}
+              searchedResults={searchedResults}
+              totalResults={totalResults}
+              setTotalResults={setTotalResults} />}
           />
           <Route path='/episodes/:idEpisode' element={<EpisodeDetails />}/> 
           <Route path="/locations"
@@ -131,6 +133,8 @@ const App = () => {
               setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
               searchedResults={searchedResults}
+              totalResults={totalResults}
+              setTotalResults={setTotalResults} 
             />}
           />
         </Routes>
