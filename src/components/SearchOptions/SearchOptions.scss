@@ -1,3 +1,6 @@
+
+@import '../../styles/variables';
+
 .container__search-options {
     display: flex;
     flex-direction: column-reverse;
@@ -18,7 +21,7 @@
     width: 220px;
     border-radius: 10px;
     background-color: rgb(0, 0, 0);
-    color: rgb(0, 255, 174);
+    color: $main-color;
     border: 1px solid rgb(4, 133, 93) ;
     font-size: 1.4em;
     display: flex;

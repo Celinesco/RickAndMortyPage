@@ -1,4 +1,4 @@
-
+@import '../../styles/variables';
 
 .navbar {
     display: flex;
@@ -19,7 +19,7 @@
         margin: 0px 10px;
     }
     a {
-        color: #00ffae;
+        color: $main-color;
     }
 }
 
@@ -69,7 +69,7 @@
 }
 
 .button__menunavbar {
-    color: #00ffae;
+    color: $main-color;
     font-size: 50px;
     margin-right: 20px
 }

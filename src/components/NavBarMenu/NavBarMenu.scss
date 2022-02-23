@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .container__navbar-menu {
     position: fixed;
     top:0;
@@ -14,7 +16,7 @@
     position: absolute;
     right: 20px;
     top:20px;
-    color: #00ffae;
+    color: $main-color;
     font-size: 40px;
 }
 
@@ -24,7 +26,7 @@
         margin-bottom:50px;
         a {
            
-            color: #00ffae;
+            color: $main-color;
         }
     }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .container__button-pages {
     display: flex;
     justify-content: center;
@@ -10,11 +12,11 @@
         display: flex;
         align-items: center;
         font-size: 50px;
-        color: #00ffae;
+        color: $main-color;
         background-color: black;
         margin: 0 10px;
         border-radius: 5px;
-        border: 1px solid #00ffae;
+        border: 1px solid $main-color;
         box-shadow:0px 1px 37px 1px rgba(54, 133, 93, 0.76);
     }
 }

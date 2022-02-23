@@ -1,3 +1,4 @@
+@import './styles/variables';
 
 .App {
     display: flex;
@@ -73,7 +74,7 @@ section {
 }
 
 .total-results {
-    color: rgb(0, 255, 174);
+    color: $main-color;
     font-size: 35px;
     margin-right: 15px;
 
@@ -83,5 +84,7 @@ section {
     color: white;
     font-size: 35px;
     font-weight: bold;
-    
 }
+
+
+

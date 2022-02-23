@@ -40,7 +40,6 @@ const LocationSection = (
                     setTotalResults(data.info.count)
                 }
             })
-
     }, [search, page]);
 
 
