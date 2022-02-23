@@ -1,11 +1,14 @@
-import LocationsContainer from "./LocationsContainer";
-import Form from "../Form/Form";
+import CharactersContainer from "./CharactersSection/CharactersContainer";
+import EpisodesContainer from "./EpisodesSection/EpisodesContainer";
+import LocationsContainer from "./LocationsSection/LocationsContainer";
+import Form from './Form/Form';
 import { useEffect } from 'react';
-import PageButtons from "../PageButtons/PageButtons";
-import SearchNotFound from "../SerachNotFound/SearchNotFound";
+import PageButtons from "./PageButtons/PageButtons";
+import SearchNotFound from "./SerachNotFound/SearchNotFound";
 
-const LocationSection = (
+const Section = (
     {
+        parametroDeBusqueda,
         search,
         setSearchedResults,
         searchedResults,
@@ -21,12 +24,13 @@ const LocationSection = (
         totalPages,
         setTotalPages,
         totalResults,
-        setTotalResults
+        setTotalResults,
+
     }) => {
 
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/location/?page=${page}&name=${search}`)
+        fetch(`https://rickandmortyapi.com/api/${parametroDeBusqueda}/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.results === undefined) {
@@ -40,7 +44,7 @@ const LocationSection = (
                     setTotalResults(data.info.count)
                 }
             })
-    }, [search, page]);
+    }, [search, page, parametroDeBusqueda]);
 
 
     return (
@@ -50,11 +54,25 @@ const LocationSection = (
                 handleClick={handleClick}
             />
             {searchNotFound && <SearchNotFound />}
-            <LocationsContainer
-                searchedResults={searchedResults}
-                totalResults={totalResults}
-                searchNotFound={searchNotFound}
-            />
+
+            {parametroDeBusqueda === "character" &&
+                <CharactersContainer
+                    searchNotFound={searchNotFound}
+                    searchedResults={searchedResults}
+                    totalResults={totalResults} />}
+            
+            {parametroDeBusqueda === "episode" &&
+                <EpisodesContainer
+                    searchNotFound={searchNotFound}
+                    searchedResults={searchedResults}
+                    totalResults={totalResults} />}
+            
+            {parametroDeBusqueda === "location" &&
+                <LocationsContainer
+                    searchNotFound={searchNotFound}
+                    searchedResults={searchedResults}
+                    totalResults={totalResults} />}
+            
             {!searchNotFound && <PageButtons
                 page={page}
                 totalPages={totalPages}
@@ -67,4 +85,4 @@ const LocationSection = (
     )
 }
 
-export default LocationSection;
+export default Section;

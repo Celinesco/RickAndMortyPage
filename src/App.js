@@ -3,9 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import MrMeeseeksBox from './assets/MrMeeseeksBox.png';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CharacterSection from './components/CharactersSection/CharacterSection';
-import EpisodeSection from "./components/EpisodesSection/EpisodeSection";
-import LocationSection from "./components/LocationsSection/LocationSection";
+import Section from './components/Section';
 import { useState } from "react";
 import MainSection from "./components/MainSection/MainSection";
 import EpisodeDetails from './components/EpisodesSection/EpisodeDetails'
@@ -89,7 +87,8 @@ const App = () => {
             handleBoxClick={handleBoxClick} />}
           />
           <Route path='/RickAndMortyPage/characters'
-            element={<CharacterSection
+            element={<Section
+              parametroDeBusqueda="character"
               input={inputValue}
               search={search}
               page={page}
@@ -110,7 +109,8 @@ const App = () => {
           />
           <Route path='/RickAndMortyPage/characters/:idCharacter' element={<CharacterDetails />} />
           <Route path='/RickAndMortyPage/episodes'
-            element={<EpisodeSection
+            element={<Section
+              parametroDeBusqueda="episode"
               input={inputValue}
               search={search}
               page={page}
@@ -131,7 +131,8 @@ const App = () => {
           />
           <Route path='/RickAndMortyPage/episodes/:idEpisode' element={<EpisodeDetails />} />
           <Route path='/RickAndMortyPage/locations'
-            element={<LocationSection
+            element={<Section
+              parametroDeBusqueda="location"
               input={inputValue}
               search={search}
               page={page}
