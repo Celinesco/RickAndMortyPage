@@ -13,7 +13,7 @@ const CharacterCard = ({ title, img, status, location, firstEpisode }) => {
     return (
         <article className='card__container'>
             <div className='img__container container__img-character'>
-                <img src={img}></img>
+                <img src={img} alt={title}></img>
             </div>
             <div className='info__container'>
                 <div className='section section-title'>

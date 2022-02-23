@@ -12,7 +12,7 @@ const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setP
             <nav className='navbar'>
                 <Link to="/" className='container__box-mrmeeseeks'>
                     <button onClick={handleBoxClick} >
-                        <img src={imgBox}></img>
+                        <img src={imgBox} alt="Meeseeks-box"></img>
                     </button>
                 </Link>
 

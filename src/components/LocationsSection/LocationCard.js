@@ -19,7 +19,7 @@ const LocationCard = ({ title, type, dimension }) => {
     return (
         <article className='card__container container__location-card'>
             <div className='img__container container__img-location'>
-                <img src={srcImage}/>
+                <img src={srcImage} alt="Dimension portal"/>
             </div>
             <div className='info__container'>
                 <div className='section section-title'>

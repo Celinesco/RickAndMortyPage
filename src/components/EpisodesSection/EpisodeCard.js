@@ -6,7 +6,7 @@ const EpisodeCard = ({ number, title, date, episodeCode }) => {
         <article className='card__container container__episode-card'>
             <div className='img__container container__img-episode '>
                 <p className='p__episode-number'>{number}</p>
-                <img src={imgEpisodeCard}></img>
+                <img src={imgEpisodeCard} alt="Rick and Morty watching television"></img>
             </div>
             <div className='info__container'>
                 <div className='section section-title'>

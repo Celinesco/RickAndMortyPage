@@ -34,7 +34,7 @@ const CharacterDetails = () => {
         <article className='section__details'>
             <h2 className="h2__title-section color-font__detail-section">CHARACTERS DETAILS</h2>
             <div className='container__img-details-section'>
-                <img src={characterDetails.image}></img>
+                <img src={characterDetails.image} alt={characterDetails.name}></img>
             </div>
             <div className='container__info-section-details' >
                 <div className="row">
@@ -60,7 +60,7 @@ const CharacterDetails = () => {
                                 <article className='card__container-related-section card__container-related-section-character' >
                                     <div className='episode-related'>
                                         <p className='p__episode-number'>{episode.id}</p>
-                                        <img src={imgEpisodeCard}></img>
+                                        <img src={imgEpisodeCard} alt="Rick and Morty watching television"></img>
                                     </div>
                                     <div className='info__container'>
                                         <div className='section section-title'>
@@ -74,7 +74,7 @@ const CharacterDetails = () => {
                         <article className='card__container-related-section card__container-related-section-character' key={appearsInEpisode.id}>
                             <div className='episode-related'>
                                 <p className='p__episode-number'>{appearsInEpisode.id}</p>
-                                <img src={imgEpisodeCard}></img>
+                                <img src={imgEpisodeCard} alt="Rick and Morty watching television"></img>
                             </div>
                             <div className='info__container'>
                                 <div className='section section-title'>

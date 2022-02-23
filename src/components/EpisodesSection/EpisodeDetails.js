@@ -38,7 +38,7 @@ const EpisodeDetails = () => {
             <h2 className="h2__title-section color-font__detail-section">EPISODE DETAILS</h2>
             <div className='container__img-episode-detail'>
                 <p className='p__episode-number'>{episodeDetails.id}</p>
-                <img src={imgEpisodeCard}></img>
+                <img src={imgEpisodeCard} alt="Rick and Morty watching the episode you chose"></img>
             </div>
             <div className='container__info-section-details' >
                 <div className="row">
@@ -60,7 +60,7 @@ const EpisodeDetails = () => {
                         <Link to={`/RickAndMortyPage/characters/${character.id}`} key={character.id} >
                             <article className='card__container-related-section' >
                                 <div className='container__img-related-section'>
-                                    <img src={character.image}></img>
+                                    <img src={character.image} alt={character.name}></img>
                                 </div>
                                 <div className='info__container'>
                                     <div className='section section-title'>

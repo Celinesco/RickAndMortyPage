@@ -17,7 +17,7 @@ const Form = ({ handleOnChange, handleClick }) => {
             </div>
             <button onClick={handleClick}>
                 <div className='container__iconsearch'>
-                    <img src={MrMeeseeksSearch}></img>
+                    <img src={MrMeeseeksSearch} alt="Mr. Meeseeks ready to help"></img>
                 </div>
 
             </button>

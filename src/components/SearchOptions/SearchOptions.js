@@ -32,7 +32,7 @@ const SearchOptions = ({resetValues}) => {
             </div>
           </div>
             <div className='container__img-mrmeeseeks'>
-                <img src={Mms}></img>
+                <img src={Mms} alt="Mr. Meeseeks look at me"></img>
             </div>
             <p className='p__presentation'>I'm Mr Meeseeks</p>
         </div>

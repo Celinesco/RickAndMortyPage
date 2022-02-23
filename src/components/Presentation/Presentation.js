@@ -8,7 +8,7 @@ const Presentation = ({handleBoxClick}) => {
                 ...Click on the box...
             </p>
             <button className='container__img-presentation' onClick={handleBoxClick}>
-                <img src={MrMeeseeksBox}></img>
+                <img src={MrMeeseeksBox} alt="Meeseeks-box"></img>
             </button>
         </div>
 
