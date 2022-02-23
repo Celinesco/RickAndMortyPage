@@ -1,6 +1,6 @@
 import CharactersContainer from "./CharactersContainer";
 import Form from '../Form/Form';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import PageButtons from "../PageButtons/PageButtons";
 import SearchNotFound from "../SerachNotFound/SearchNotFound";
 

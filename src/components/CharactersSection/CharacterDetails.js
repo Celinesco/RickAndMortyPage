@@ -26,7 +26,7 @@ const CharacterDetails = () => {
                     .then((res) => res.json())
                     .then((data) => setAppearsInEpisode(data));
             });
-    }, []);
+    }, [params.idCharacter]);
 
 
 
@@ -53,7 +53,7 @@ const CharacterDetails = () => {
             <h3 className="color-font__detail-section">You can find {characterDetails.name} in:</h3>
             <div className="container__cards-section-details container__cards-section-details-episodes ">
                 {Array.isArray(appearsInEpisode)
-                    ? (appearsInEpisode.length == 51
+                    ? (appearsInEpisode.length === 51
                         ? <div className='info-detail-section'> in every episode!! </div>
                         : appearsInEpisode.map((episode) => (
                             <Link to={`/RickAndMortyPage/episodes/${episode.id}`} key={episode.id}>

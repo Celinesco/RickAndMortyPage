@@ -29,7 +29,7 @@ const EpisodeDetails = () => {
                     .then((res) => res.json())
                     .then((data) => Array.isArray(data) && setCharactersInEpisode(data));
             });
-    }, []);
+    }, [params.idEpisode]);
 
 
 
