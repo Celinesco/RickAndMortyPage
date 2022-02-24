@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './NavBar.scss'
 import { BiMenu } from "react-icons/bi";
-import NavBarMenu from '../NavBarMenu/NavBarMenu'
+import NavBarMenu from '../NavBarMenu/NavBarMenu';
 
 
 

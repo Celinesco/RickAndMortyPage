@@ -33,17 +33,11 @@ const Section = (
         fetch(`https://rickandmortyapi.com/api/${parametroDeBusqueda}/?page=${page}&name=${search}`)
             .then((res) => res.json())
             .then((data) => {
-                if (data.results === undefined) {
-                    setSearchNotFound(true)
-                    setSearchedResults([])
-                }
-                else {
-                    setSearchNotFound(false)
-                    setSearchedResults(data.results)
-                    setTotalPages(data.info.pages)
-                    setTotalResults(data.info.count)
-                }
-            })
+                    setSearchNotFound(Boolean(!data.results)) 
+                    setSearchedResults(data.results ? data.results : []) 
+                    setTotalPages(data?.info?.pages || 0)
+                    setTotalResults(data?.info?.count || 0)
+                })
     }, [search, page, parametroDeBusqueda]);
 
 
