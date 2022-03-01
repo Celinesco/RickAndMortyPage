@@ -1,6 +1,5 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-import MrMeeseeksBox from './assets/MrMeeseeksBox.png';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Section from './components/Section';
@@ -29,7 +28,6 @@ const App = () => {
   const resetValues = () => {
     setPage(1)
     setSearch([])
-
   }
   const handleBoxClick = () => {
     setVisibleBox(false)
@@ -71,7 +69,6 @@ const App = () => {
       <BrowserRouter>
         <NavBar
           resetValues={resetValues}
-          imgBox={MrMeeseeksBox}
           handleClickLogo={handleClickLogo}
           handleClickLinkMenu={handleClickLinkMenu}
           setNavMenu={setNavMenu}

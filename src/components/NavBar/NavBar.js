@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import './NavBar.scss'
 import { BiMenu } from "react-icons/bi";
 import NavBarMenu from '../NavBarMenu/NavBarMenu';
+import MrMeeseeksBox from '../../assets/MrMeeseeksBox.png';
 
 
-
-const NavBar = ({ imgBox, handleClickLogo, handleClickLinkMenu, setNavMenu, setPage, handleBoxClick, navMenu, resetValues }) => {
-
+const NavBar = ({handleClickLogo, handleClickLinkMenu, setNavMenu, handleBoxClick, navMenu, resetValues }) => {
+    
     return (
         <div>
             <nav className='navbar'>
                 <Link to="/" className='container__box-mrmeeseeks'>
                     <button onClick={handleBoxClick} >
-                        <img src={imgBox} alt="Meeseeks-box"></img>
+                        <img src={MrMeeseeksBox} alt="Meeseeks-box"></img>
                     </button>
                 </Link>
 
