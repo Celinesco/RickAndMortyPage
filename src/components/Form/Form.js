@@ -1,11 +1,14 @@
 import './Form.scss'
 import MrMeeseeksSearch from '../../assets/Mr_Meeseeks.png'
 
-const Form = ({ handleOnChange, handleClick }) => {
+const Form = ({ setInputValue, handleClick }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
     }
+
+    const handleOnChange = e =>  setInputValue(e.target.value);
+      
 
 
     return (

@@ -16,7 +16,6 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState([]);
   const [page, setPage] = useState(1);
-  const [searchedResults, setSearchedResults] = useState([]);
   const [visibleOption, setVisibleOption] = useState(false)
   const [visibleBox, setVisibleBox] = useState(true);
 
@@ -34,9 +33,7 @@ const App = () => {
     setVisibleBox(true)
     setVisibleOption(false)
   };
-  const handleOnChange = (e) => {
-    setInputValue(e.target.value)
-  };
+  
   const handleClick = () => {
     setSearch(inputValue)
     setPage(1)
@@ -61,40 +58,31 @@ const App = () => {
           <Route path='/RickAndMortyPage/characters'
             element={<Section
               parametroDeBusqueda="character"
-              input={inputValue}
               search={search}
               page={page}
-              handleOnChange={handleOnChange}
+              setInputValue={setInputValue}
               handleClick={handleClick}
-              setPage={setPage}
-              setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults}/>}
+              setPage={setPage}/>}
           />
           <Route path='/RickAndMortyPage/characters/:idCharacter' element={<CharacterDetails />} />
           <Route path='/RickAndMortyPage/episodes'
             element={<Section
               parametroDeBusqueda="episode"
-              input={inputValue}
               search={search}
               page={page}
               setPage={setPage}
-              handleOnChange={handleOnChange}
-              handleClick={handleClick}
-              setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults} />}
+              setInputValue={setInputValue}
+              handleClick={handleClick}/>}
           />
           <Route path='/RickAndMortyPage/episodes/:idEpisode' element={<EpisodeDetails />} />
           <Route path='/RickAndMortyPage/locations'
             element={<Section
               parametroDeBusqueda="location"
-              input={inputValue}
               search={search}
               page={page}
               setPage={setPage}
-              handleOnChange={handleOnChange}
-              handleClick={handleClick}
-              setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults} />}
+              setInputValue={setInputValue}
+              handleClick={handleClick}/>}
           />
         </Routes>
         <Footer />

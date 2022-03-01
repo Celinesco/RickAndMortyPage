@@ -10,18 +10,18 @@ const Section = (
     {
         parametroDeBusqueda,
         search,
-        setSearchedResults,
-        searchedResults,
         handleOnChange,
         handleClick,
         page,
         setPage,
+        setInputValue,
 
     }) => {
 
     const [totalResults, setTotalResults] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
-    const [searchNotFound, setSearchNotFound] = useState(false)
+    const [searchNotFound, setSearchNotFound] = useState(false);
+    const [searchedResults, setSearchedResults] = useState([]);
 
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/${parametroDeBusqueda}/?page=${page}&name=${search}`)
@@ -38,7 +38,7 @@ const Section = (
     return (
         <section className="sections__styles">
             <Form
-                handleOnChange={handleOnChange}
+                setInputValue={setInputValue}
                 handleClick={handleClick}
             />
             {searchNotFound && <SearchNotFound />}
