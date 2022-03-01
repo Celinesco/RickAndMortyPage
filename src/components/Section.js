@@ -2,7 +2,7 @@ import CharactersContainer from "./CharactersSection/CharactersContainer";
 import EpisodesContainer from "./EpisodesSection/EpisodesContainer";
 import LocationsContainer from "./LocationsSection/LocationsContainer";
 import Form from './Form/Form';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PageButtons from "./PageButtons/PageButtons";
 import SearchNotFound from "./SerachNotFound/SearchNotFound";
 
@@ -12,22 +12,16 @@ const Section = (
         search,
         setSearchedResults,
         searchedResults,
-        searchNotFound,
-        setSearchNotFound,
         handleOnChange,
         handleClick,
         page,
-        firstPage,
-        nextPage,
-        previousPage,
-        lastPage,
-        totalPages,
-        setTotalPages,
-        totalResults,
-        setTotalResults,
+        setPage,
 
     }) => {
 
+    const [totalResults, setTotalResults] = useState(0);
+    const [totalPages, setTotalPages] = useState(1);
+    const [searchNotFound, setSearchNotFound] = useState(false)
 
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/${parametroDeBusqueda}/?page=${page}&name=${search}`)
@@ -69,11 +63,8 @@ const Section = (
             
             {!searchNotFound && <PageButtons
                 page={page}
+                setPage={setPage}
                 totalPages={totalPages}
-                nextPage={nextPage}
-                previousPage={previousPage}
-                lastPage={lastPage}
-                firstPage={firstPage}
             />}
         </section>
     )

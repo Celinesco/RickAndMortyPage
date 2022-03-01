@@ -3,10 +3,16 @@ import './NavBar.scss'
 import { BiMenu } from "react-icons/bi";
 import NavBarMenu from '../NavBarMenu/NavBarMenu';
 import MrMeeseeksBox from '../../assets/MrMeeseeksBox.png';
+import { useState } from "react";
 
 
-const NavBar = ({handleClickLogo, handleClickLinkMenu, setNavMenu, handleBoxClick, navMenu, resetValues }) => {
-    
+const NavBar = ({setPage, handleClickLogo, handleBoxClick, resetValues }) => {
+    const [navMenu, setNavMenu] = useState(false);
+    const handleClickLinkMenu = () => {
+        setPage(1)
+        setNavMenu(false)
+      };
+
     return (
         <div>
             <nav className='navbar'>

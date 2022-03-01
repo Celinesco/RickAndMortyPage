@@ -5,7 +5,13 @@ import { BiChevronRight } from 'react-icons/bi';
 import { BiChevronsRight } from 'react-icons/bi';
 
 
-const PageButtons = ({ page, totalPages, nextPage, previousPage, lastPage, firstPage }) => {
+const PageButtons = ({ page, setPage, totalPages }) => {
+
+    const nextPage = () => page !== totalPages && setPage(page + 1);
+    const previousPage = () => page !== 1 && setPage(page - 1);
+    const lastPage = () =>  page !== totalPages && setPage(totalPages);
+    const firstPage = () => page !== 1 && setPage(1);
+
     return (
         <div className='container__button-pages'>
             <button><BiChevronsLeft onClick={firstPage} /></button>

@@ -16,32 +16,24 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
   const [searchedResults, setSearchedResults] = useState([]);
   const [visibleOption, setVisibleOption] = useState(false)
   const [visibleBox, setVisibleBox] = useState(true);
-  const [navMenu, setNavMenu] = useState(false);
-  const [totalResults, setTotalResults] = useState(0);
-  const [searchNotFound, setSearchNotFound] = useState(false)
 
-
+  
   const resetValues = () => {
     setPage(1)
     setSearch([])
-  }
+  };
   const handleBoxClick = () => {
     setVisibleBox(false)
     setVisibleOption(true)
-  }
-  const handleClickLinkMenu = () => {
-    setPage(1)
-    setNavMenu(false)
-  }
+  };
 
   const handleClickLogo = () => {
     setVisibleBox(true)
     setVisibleOption(false)
-  }
+  };
   const handleOnChange = (e) => {
     setInputValue(e.target.value)
   };
@@ -49,20 +41,7 @@ const App = () => {
     setSearch(inputValue)
     setPage(1)
   };
-  const nextPage = () => {
-    if (page !== totalPages)
-      setPage(page + 1)
-  };
-  const previousPage = () => {
-    if (page !== 1)
-      setPage(page - 1)
-  };
-  const lastPage = () => {
-    setPage(totalPages)
-  };
-  const firstPage = () => {
-    setPage(1)
-  };
+
 
   return (
     <div className='App'>
@@ -70,12 +49,8 @@ const App = () => {
         <NavBar
           resetValues={resetValues}
           handleClickLogo={handleClickLogo}
-          handleClickLinkMenu={handleClickLinkMenu}
-          setNavMenu={setNavMenu}
-          setPage={setPage}
           handleBoxClick={handleBoxClick}
-          navMenu={navMenu}
-        />
+          setPage={setPage} />
         <Routes>
           <Route path="*" element={<MainSection
             resetValues={resetValues}
@@ -89,20 +64,11 @@ const App = () => {
               input={inputValue}
               search={search}
               page={page}
-              totalPages={totalPages}
               handleOnChange={handleOnChange}
               handleClick={handleClick}
-              firstPage={firstPage}
-              previousPage={previousPage}
-              nextPage={nextPage}
-              lastPage={lastPage}
-              setTotalPages={setTotalPages}
+              setPage={setPage}
               setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults}
-              searchNotFound={searchNotFound}
-              setSearchNotFound={setSearchNotFound}
-              totalResults={totalResults}
-              setTotalResults={setTotalResults} />}
+              searchedResults={searchedResults}/>}
           />
           <Route path='/RickAndMortyPage/characters/:idCharacter' element={<CharacterDetails />} />
           <Route path='/RickAndMortyPage/episodes'
@@ -111,20 +77,11 @@ const App = () => {
               input={inputValue}
               search={search}
               page={page}
-              totalPages={totalPages}
+              setPage={setPage}
               handleOnChange={handleOnChange}
               handleClick={handleClick}
-              firstPage={firstPage}
-              previousPage={previousPage}
-              nextPage={nextPage}
-              lastPage={lastPage}
-              setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
-              searchNotFound={searchNotFound}
-              setSearchNotFound={setSearchNotFound}
-              searchedResults={searchedResults}
-              totalResults={totalResults}
-              setTotalResults={setTotalResults} />}
+              searchedResults={searchedResults} />}
           />
           <Route path='/RickAndMortyPage/episodes/:idEpisode' element={<EpisodeDetails />} />
           <Route path='/RickAndMortyPage/locations'
@@ -133,21 +90,11 @@ const App = () => {
               input={inputValue}
               search={search}
               page={page}
-              totalPages={totalPages}
+              setPage={setPage}
               handleOnChange={handleOnChange}
               handleClick={handleClick}
-              firstPage={firstPage}
-              previousPage={previousPage}
-              nextPage={nextPage}
-              lastPage={lastPage}
-              setTotalPages={setTotalPages}
               setSearchedResults={setSearchedResults}
-              searchedResults={searchedResults}
-              searchNotFound={searchNotFound}
-              setSearchNotFound={setSearchNotFound}
-              totalResults={totalResults}
-              setTotalResults={setTotalResults}
-            />}
+              searchedResults={searchedResults} />}
           />
         </Routes>
         <Footer />
