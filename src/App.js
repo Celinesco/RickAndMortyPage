@@ -13,7 +13,6 @@ import CharacterDetails from './components/CharactersSection/CharacterDetails';
 
 const App = () => {
 
-  const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState([]);
   const [page, setPage] = useState(1);
   const [visibleOption, setVisibleOption] = useState(false)
@@ -34,10 +33,10 @@ const App = () => {
     setVisibleOption(false)
   };
   
-  const handleClick = () => {
-    setSearch(inputValue)
-    setPage(1)
-  };
+  // const handleClick = () => {
+  //   setSearch(inputValue)
+  //   setPage(1)
+  // };
 
 
   return (
@@ -60,8 +59,7 @@ const App = () => {
               parametroDeBusqueda="character"
               search={search}
               page={page}
-              setInputValue={setInputValue}
-              handleClick={handleClick}
+              setSearch={setSearch}
               setPage={setPage}/>}
           />
           <Route path='/RickAndMortyPage/characters/:idCharacter' element={<CharacterDetails />} />
@@ -71,8 +69,7 @@ const App = () => {
               search={search}
               page={page}
               setPage={setPage}
-              setInputValue={setInputValue}
-              handleClick={handleClick}/>}
+              setSearch={setSearch}/>}
           />
           <Route path='/RickAndMortyPage/episodes/:idEpisode' element={<EpisodeDetails />} />
           <Route path='/RickAndMortyPage/locations'
@@ -81,8 +78,7 @@ const App = () => {
               search={search}
               page={page}
               setPage={setPage}
-              setInputValue={setInputValue}
-              handleClick={handleClick}/>}
+              setSearch={setSearch}/>}
           />
         </Routes>
         <Footer />

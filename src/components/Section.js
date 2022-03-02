@@ -10,11 +10,9 @@ const Section = (
     {
         parametroDeBusqueda,
         search,
-        handleOnChange,
-        handleClick,
+        setSearch,
         page,
         setPage,
-        setInputValue,
 
     }) => {
 
@@ -38,8 +36,8 @@ const Section = (
     return (
         <section className="sections__styles">
             <Form
-                setInputValue={setInputValue}
-                handleClick={handleClick}
+                setSearch={setSearch}
+                setPage={setPage}
             />
             {searchNotFound && <SearchNotFound />}
 
