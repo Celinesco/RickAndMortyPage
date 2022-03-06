@@ -5,7 +5,7 @@
 
 ### Español
 
-La página surgió de una práctica, donde aprendimos dos Hooks, useEffect y useState para utilizar APIs con React. 
+La página surgió de una práctica donde aprendimos dos Hooks, useEffect y useState para utilizar APIs con React. 
 Es mi primer aplicación hecha con React.
 
 ![Hecho con React](https://shields.io/badge/made%20with-React-lightblue?logo=react&style=plastic)
