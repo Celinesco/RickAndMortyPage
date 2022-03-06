@@ -25,7 +25,3 @@ Cualquier sugerencia, es bienvenida ;).
 2. Corre npm install (dentro del directorio del repo clonado)
 3. Npm start
 
-
-## Uso de useState en React
- Ejercicio de fetch en React para no caer en el loop infinito. 
-
