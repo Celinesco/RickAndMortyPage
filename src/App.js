@@ -15,7 +15,6 @@ const App = () => {
   const [visibleOption, setVisibleOption] = useState(false)
   const [visibleBox, setVisibleBox] = useState(true);
    
-  console.log("cuantas veces")
   
   const resetValues = () => {
     setPage(1)
