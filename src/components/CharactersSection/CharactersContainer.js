@@ -1,5 +1,6 @@
 import CharacterCard from './CharacterCard';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 
 
