@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+
+.container__error404 {
+    min-height: 90vh;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+        font-size: 50px;
+        color: $main-color;
+    }
+    p {
+        font-size: 25px;
+        color: white
+    }
+    .container__img-error404 {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@import '../../styles/breakpoints';

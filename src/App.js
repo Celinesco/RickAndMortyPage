@@ -7,6 +7,7 @@ import { useState } from "react";
 import MainSection from "./components/MainSection/MainSection";
 import EpisodeDetails from './components/EpisodesSection/EpisodeDetails'
 import CharacterDetails from './components/CharactersSection/CharacterDetails';
+import Error404 from './components/Error404/Error404';
 
 
 const App = () => {
@@ -40,7 +41,7 @@ const App = () => {
           handleBoxClick={handleBoxClick}
           setPage={setPage} />
         <Routes>
-          <Route path="*" element={<MainSection
+          <Route path="/" element={<MainSection
             resetValues={resetValues}
             visibleBox={visibleBox}
             visibleOption={visibleOption}
@@ -72,6 +73,7 @@ const App = () => {
               search={search}
               setSearch={setSearch}/>}
           />
+          <Route path='/*' element={<Error404 />} />
         </Routes>
         <Footer />
       </BrowserRouter>

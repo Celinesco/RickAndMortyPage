@@ -227,9 +227,29 @@
             top:48px
         }
     }
+    .container__error404 {
+        min-height: 70vh;
+        margin: 50px 10px;
+       h2 {
+           font-size: 30px;
+       }
+       p {
+           font-size: 18px;
+       }
+    }
  }
 
  @media (max-width: 335.98px) {
+     .container__error404 {
+         min-height: 70vh;
+         margin: 50px 10px;
+        h2 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 15px;
+        }
+     }
      .container__cards {
          width: 290px;
          .row{
