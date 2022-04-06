@@ -1,12 +1,4 @@
 
-// @media (max-width: 1399.98px) { ... }
-
-
-// @media (max-width: 1199.98px) { 
-   
-// }
-
-
  @media (max-width: 991.98px) { 
     .p__logo {
         width: 150px;
@@ -56,11 +48,23 @@
     .form {
         width: 120%;
     }
+    .info__container {
+        width: 250px;
+        h3 {
+            text-align: left;
+        }
+    }
  }
 
 @media (min-width: 767.98px) { 
     .button__menunavbar {
         display: none;
+    }
+    .info__container {
+        width: 250px;
+        h3 {
+            text-align: left;
+        }
     }
  }
 
@@ -134,6 +138,7 @@
     }
     .container__episode-card {
         .info__container {
+            align-items: center;
             height: 100px;
             overflow-y: scroll;
             word-wrap: break-word;
@@ -142,9 +147,6 @@
                 font-size: 13px;
                 margin:0;
             }
-        }
-        .section-title {
-            justify-content: center;
         }
     }
     .container__location-card {

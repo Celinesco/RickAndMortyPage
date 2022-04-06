@@ -70,7 +70,7 @@ const CharacterDetails = () => {
                                             </div>
                                             <div className='info__container'>
                                                 <div className='section section-title'>
-                                                    <h2>{episode.name}</h2>
+                                                    <h3>{episode.name}</h3>
                                                 </div>
                                             </div>
                                         </article>
@@ -83,8 +83,8 @@ const CharacterDetails = () => {
                                         <img src={imgEpisodeCard} alt="Rick and Morty watching television"></img>
                                     </div>
                                     <div className='info__container'>
-                                        <div className='section section-title'>
-                                            <h2>{appearsInEpisode.name}</h2>
+                                        <div className='section'>
+                                            <h3>{appearsInEpisode.name}</h3>
                                         </div>
                                     </div>
                                 </article>

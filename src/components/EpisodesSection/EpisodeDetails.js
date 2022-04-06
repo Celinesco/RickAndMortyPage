@@ -63,8 +63,8 @@ const EpisodeDetails = () => {
                                     <img src={character.image} alt={character.name}></img>
                                 </div>
                                 <div className='info__container'>
-                                    <div className='section section-title'>
-                                        <h2>{character.name}</h2>
+                                    <div className='section'>
+                                        <h3>{character.name}</h3>
                                     </div>
                                 </div>
                             </article>
