@@ -10,7 +10,7 @@ const EpisodeCard = ({ number, title, date, episodeCode }) => {
             </div>
             <div className='info__container'>
                 <div className='section section-title'>
-                    <h2>{title}</h2>
+                    <h3>{title.toUpperCase()}</h3>
                 </div>
                 <div className='section hide-mobile'>
                     <p className='subtitle'>Released date</p>

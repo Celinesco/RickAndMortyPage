@@ -17,7 +17,7 @@ const CharacterCard = ({ title, img, status, location}) => {
             </div>
             <div className='info__container'>
                 <div className='section section-title'>
-                    <h2>{title}</h2>
+                    <h3>{title.toUpperCase()}</h3>
                     <div className='section'>
                         <div className='container__status'>
                             <div className={status}></div>
