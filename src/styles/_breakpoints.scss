@@ -135,8 +135,11 @@
     .container__episode-card {
         .info__container {
             height: 100px;
+            overflow-y: scroll;
+            word-wrap: break-word;
             h3 {
-                font-size: 15px;
+                width: 115px;
+                font-size: 13px;
                 margin:0;
             }
         }
@@ -146,14 +149,17 @@
     }
     .container__location-card {
         .info__container {
-            height: 20px;
+            overflow-y: scroll;
+            word-wrap: break-word;
             h3 {
+                width: 115px;
                 font-size: 15px;
             }
         }
     }
     .container__img-location {
         width: 140px;
+        height: 123px;
         border: none;
         img {
             border-radius: 10px 10px 0px 0px;
