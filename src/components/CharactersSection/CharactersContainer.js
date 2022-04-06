@@ -14,7 +14,7 @@ const CharactersContainer = ({ searchedResults, totalResults, searchNotFound }) 
             </div>
             }
             {searchedResults.map((result) => (
-                <Link to={`/RickAndMortyPage/characters/${result.id}`} key={result.id}>
+                <Link to={`/characters/${result.id}`} key={result.id}>
                     <CharacterCard
                         id={result.id}
                         title={result.name}

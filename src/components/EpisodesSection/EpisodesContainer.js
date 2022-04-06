@@ -11,7 +11,7 @@ const EpisodesContainer = ({ searchedResults, totalResults, searchNotFound }) =>
                 </div>
             }
             {searchedResults.map((result) => (
-                <Link to={`/RickAndMortyPage/episodes/${result.id}`} key={result.id}>
+                <Link to={`/episodes/${result.id}`} key={result.id}>
                     <EpisodeCard
                         number={result.id}
                         title={result.name}

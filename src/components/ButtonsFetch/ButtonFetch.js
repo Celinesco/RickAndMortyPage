@@ -6,7 +6,7 @@ const ButtonFetch = ({ message, route, resetValues }) => {
 
     return (
         <div className='container__buttonsfetch'>
-            <Link to={`/RickAndMortyPage${route}`} onClick={resetValues} className='button__fetch'>
+            <Link to={`/${route}`} onClick={resetValues} className='button__fetch'>
                 {message}
             </Link>
             <Routes>

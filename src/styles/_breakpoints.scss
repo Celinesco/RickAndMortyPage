@@ -227,8 +227,15 @@
             top:48px
         }
     }
-
  }
 
+ @media (max-width: 335.98px) {
+     .container__cards {
+         width: 290px;
+         .row{
+             flex-wrap: wrap;
+         }
+     }
+ }
 
 

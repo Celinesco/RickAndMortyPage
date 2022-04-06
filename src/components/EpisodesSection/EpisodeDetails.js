@@ -57,7 +57,7 @@ const EpisodeDetails = () => {
                 <h3 className="color-font__detail-section">Characters in this episode:</h3>
                 <div className="container__cards-section-episode">
                     {charactersInEpisode.map((character) => (
-                        <Link to={`/RickAndMortyPage/characters/${character.id}`} key={character.id} >
+                        <Link to={`/characters/${character.id}`} key={character.id} >
                             <article className='card__container-related-section' >
                                 <div className='container__img-related-section'>
                                     <img src={character.image} alt={character.name}></img>
