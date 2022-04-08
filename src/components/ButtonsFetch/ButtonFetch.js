@@ -1,5 +1,5 @@
 import './ButtonFetch.scss';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const ButtonFetch = ({ message, route, resetValues }) => {
