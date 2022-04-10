@@ -11,11 +11,11 @@
 La página surgió de una práctica donde aprendimos dos Hooks, useEffect y useState para utilizar APIs con React. 
 Es mi primer aplicación hecha con React.
 
-![Hecho con React](https://shields.io/badge/made%20with-React-lightblue?logo=react&style=plastic)
-![Hecho con Sass](https://shields.io/badge/made%20with-Sass-ff69b4?logo=sass&style=plastic)
+![Hecho con React](https://shields.io/badge/hecho%20con-React-lightblue?logo=react&style=plastic)
+![Hecho con Sass](https://shields.io/badge/hecho%20con-Sass-ff69b4?logo=sass&style=plastic)
 
 
-Las imágenes las saqué de internet, y el gif del README de ![Giphy](https://giphy.com/)
+Las imágenes las saqué de internet, y el gif del README de [Giphy](https://giphy.com/)
 Espero que la disfrutes!
 
 Te dejo el [acá el link a la página](https://morty-and-rick-page.netlify.app/)
@@ -32,3 +32,20 @@ Cualquier sugerencia, es bienvenida ;).
 
 
 
+## English
+
+This page (SPA) was the result of an exercise. We were taught how to use APIs with React and to make pages more navigable with React Router DOM.
+This is my first experience with React.
+
+![Made with React](https://shields.io/badge/made%20with-React-lightblue?logo=react&style=plastic)
+![Made with Sass](https://shields.io/badge/made%20with-Sass-ff69b4?logo=sass&style=plastic)
+
+Click [HERE](https://morty-and-rick-page.netlify.app/) to see the demo.
+
+Any suggestion, always welcome. 
+
+### Run the project on yout computer:
+
+1. Clone https://github.com/Celinesco/RickAndMortyPage
+2. Run npm install (inside the dir you cloned the repo)
+3. npm start
