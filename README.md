@@ -1,8 +1,7 @@
-![Imagen diferentes dispositivos](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrgawmskQyOWYYncgzzRGT93iibJ4JRWYX-f6F2kvI_jnLRM6QB3t_UEAW6kwPp0pZ0P1nhSh10cA5yrk0K9Nix3ABbWWvAwIY4r1U2nUoxNLH9_cK9ZV8izLo67_vhjSOH1FWFBXRiNXMRSSEy_F0Wvm7k5uYJxtq4eYRkdigS4JJmRKJOV19dP3rNA/w477-h235/rickmortyDifDevices-01-01.png)
 
 # Rick and Morty
 
-![GifPresentation](https://media.giphy.com/media/J6D0TKmvHKYjbJmarX/giphy.gif)
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrgawmskQyOWYYncgzzRGT93iibJ4JRWYX-f6F2kvI_jnLRM6QB3t_UEAW6kwPp0pZ0P1nhSh10cA5yrk0K9Nix3ABbWWvAwIY4r1U2nUoxNLH9_cK9ZV8izLo67_vhjSOH1FWFBXRiNXMRSSEy_F0Wvm7k5uYJxtq4eYRkdigS4JJmRKJOV19dP3rNA/w477-h235/rickmortyDifDevices-01-01.png" width="500">
 
 ### Español
 
@@ -22,7 +21,11 @@ Cualquier sugerencia, es bienvenida ;).
 
 #### Instrucciones para correr la App en tu compu:
 
+![GifPresentation](https://media.giphy.com/media/J6D0TKmvHKYjbJmarX/giphy.gif)
+
 1. Clonea el repo
 2. Corre npm install (dentro del directorio del repo clonado)
 3. Npm start
+
+
 
