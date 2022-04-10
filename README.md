@@ -1,4 +1,4 @@
-![Imagen diferentes dispositivos](https://imgur.com/4vOOZV2)
+![Imagen diferentes dispositivos](https://imgur.com/a/YdxZ11Z)
 
 # Rick and Morty
 
