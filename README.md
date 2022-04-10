@@ -1,7 +1,8 @@
-![GifPresentation](https://media.giphy.com/media/J6D0TKmvHKYjbJmarX/giphy.gif)
-
+![Imagen diferentes dispositivos](https://imgur.com/4vOOZV2)
 
 # Rick and Morty
+
+![GifPresentation](https://media.giphy.com/media/J6D0TKmvHKYjbJmarX/giphy.gif)
 
 ### Español
 
