@@ -4,8 +4,6 @@
 
 <img src="https://user-images.githubusercontent.com/64862069/162631217-ec28549f-d118-41a9-8fe1-3bf640ff79ea.png" alt="Aplicacion en diferentes dispositivos" >
 
-
-
 ## Español
 
 La página surgió de una práctica donde aprendimos dos Hooks, useEffect y useState para utilizar APIs con React. 
